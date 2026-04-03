@@ -1,0 +1,225 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Asynk Runner — typography & spacing overrides on top of hugo-bearblog
+   Inspiration: Scribbles (scribbles.page) — warm serif, generous spacing
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Fonts loaded via custom_head.html:
+   - Lora      → body text  (warm, readable serif)
+   - Inter     → nav, meta, tags, headings (clean sans-serif)            */
+
+/* ── Root overrides ───────────────────────────────────────────────────── */
+:root {
+  --width:        680px;
+  --font-main:    "Lora", Georgia, "Times New Roman", serif;
+  --font-second:  "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Warm off-white instead of stark white */
+  --background-color: #faf9f6;
+  --text-color:       #2c2c2c;
+  --heading-color:    #1a1a1a;
+
+  /* Forest green — running trails, outdoors, travel */
+  --link-color:    #2e7d5e;
+  --visited-color: #5a9e7e;
+
+  --meta-color:    #888;
+  --border-color:  #e8e3d8;
+}
+
+/* ── Dark mode overrides ──────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1a1c19;
+    --text-color:       #e4e8e1;
+    --heading-color:    #f0f4ed;
+    --link-color:       #6abf9e;
+    --visited-color:    #8ecfb4;
+    --meta-color:       #7a8078;
+    --border-color:     #2e332c;
+  }
+}
+
+/* ── Base typography ──────────────────────────────────────────────────── */
+body {
+  font-family: var(--font-main);
+  font-size:   18px;
+  line-height: 1.85;
+  color:       var(--text-color);
+  background:  var(--background-color);
+}
+
+/* Headings: Inter for clean contrast against Lora body */
+h1, h2, h3, h4, h5, h6 {
+  font-family:     var(--font-second);
+  font-weight:     600;
+  line-height:     1.25;
+  letter-spacing:  -0.02em;
+  color:           var(--heading-color);
+}
+
+h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+h2 { font-size: 1.35rem; margin-top: 2rem; }
+h3 { font-size: 1.1rem;  margin-top: 1.5rem; }
+
+/* ── Navigation ──────────────────────────────────────────────────────── */
+nav, nav a {
+  font-family: var(--font-second);
+  font-size:   0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* ── Links ────────────────────────────────────────────────────────────── */
+a {
+  color:                  var(--link-color);
+  text-decoration:        underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset:  3px;
+}
+
+a:visited { color: var(--visited-color); }
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* ── Post list (homepage) ─────────────────────────────────────────────── */
+ul.post-list li {
+  margin-bottom: 0.6rem;
+}
+
+ul.post-list li a {
+  font-family:    var(--font-second);
+  font-weight:    500;
+  font-size:      1rem;
+  text-decoration: none;
+}
+
+ul.post-list li a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* Date column in post list */
+ul.post-list li time {
+  font-family: var(--font-second);
+  font-size:   0.82rem;
+  color:       var(--meta-color);
+}
+
+/* ── Post page ────────────────────────────────────────────────────────── */
+/* Title above a post */
+article h1 {
+  font-size:     2rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Post meta (date, tags) */
+.post-meta,
+article time,
+article .tags {
+  font-family: var(--font-second);
+  font-size:   0.82rem;
+  color:       var(--meta-color);
+}
+
+article .tags a {
+  font-size:       0.78rem;
+  text-transform:  uppercase;
+  letter-spacing:  0.06em;
+  text-decoration: none;
+  border-bottom:   1px solid var(--border-color);
+  padding-bottom:  1px;
+}
+
+article .tags a:hover {
+  border-bottom-color: var(--link-color);
+}
+
+/* ── Reading experience ───────────────────────────────────────────────── */
+/* First paragraph after title — slightly larger lead-in */
+article > p:first-of-type {
+  font-size:   1.08rem;
+  line-height: 1.8;
+}
+
+blockquote {
+  border-left:  3px solid var(--border-color);
+  padding-left: 1.25rem;
+  margin-left:  0;
+  font-style:   italic;
+  color:        var(--meta-color);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* Inline code */
+code {
+  font-size:        0.85em;
+  background-color: color-mix(in srgb, var(--text-color) 6%, var(--background-color));
+  padding:          0.15em 0.35em;
+  border-radius:    3px;
+}
+
+/* Code blocks */
+pre code {
+  background:   none;
+  padding:      0;
+  border-radius: 0;
+  font-size:    0.88rem;
+  line-height:  1.6;
+}
+
+pre {
+  padding:       1.25rem 1.5rem;
+  border-radius: 6px;
+  overflow-x:    auto;
+  border:        1px solid var(--border-color);
+}
+
+/* Images */
+article img {
+  border-radius: 4px;
+  max-width:     100%;
+  height:        auto;
+}
+
+/* Horizontal rule — lighter than bearblog default */
+hr {
+  border:       none;
+  border-top:   1px solid var(--border-color);
+  margin:       2.5rem 0;
+}
+
+/* ── Footer ───────────────────────────────────────────────────────────── */
+footer {
+  font-family: var(--font-second);
+  font-size:   0.82rem;
+  color:       var(--meta-color);
+  border-top:  1px solid var(--border-color);
+  padding-top: 1.5rem;
+  margin-top:  3rem;
+}
+
+/* ── Giscus comments ──────────────────────────────────────────────────── */
+.giscus {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  body        { font-size: 17px; }
+  article h1  { font-size: 1.6rem; }
+
+  /* Stack date + title on small screens (override bearblog's flex row) */
+  ul.post-list li {
+    display:        flex;
+    flex-direction: column;
+    gap:            0.1rem;
+  }
+}
