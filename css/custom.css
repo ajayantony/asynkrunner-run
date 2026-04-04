@@ -76,12 +76,118 @@ h3 {
   color:         var(--link-color);
 }
 
-/* ── Navigation ──────────────────────────────────────────────────────── */
-nav, nav a {
-  font-family: var(--font-second);
-  font-size:   0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
+/* ── Header & Navigation ─────────────────────────────────────────────── */
+header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  margin-bottom:   2rem;
+  gap:             1rem;
+}
+
+header .title {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand {
+  display:        flex;
+  flex-direction: column;
+  line-height:    1.2;
+}
+
+/* Composite brand icon: green pill wrapping monitor SVG + runner PNG */
+.brand-icon-wrap {
+  display:     flex;
+  align-items: center;
+  gap:         6px;
+  background:  var(--link-color);
+  border-radius: 16px;
+  padding:     7px 10px;
+  flex-shrink: 0;
+}
+
+.brand-monitor-svg {
+  width:  34px;
+  height: 37px;
+}
+
+.brand-runner-img {
+  width:        58px;
+  height:       58px;
+  border-radius: 50%;
+  background:   white;
+  padding:      4px;
+  box-sizing:   border-box;
+}
+
+.brand-name {
+  font-family:  var(--font-second);
+  font-size:    1.9rem;
+  font-weight:  800;
+  letter-spacing: -0.03em;
+
+  /* Gradient text */
+  background:                linear-gradient(120deg, var(--heading-color) 40%, var(--link-color));
+  -webkit-background-clip:   text;
+  -webkit-text-fill-color:   transparent;
+  background-clip:           text;
+}
+
+.brand-k {
+  font-style:  italic;
+  font-size:   2.1rem;
+}
+
+.brand-tagline {
+  font-family:    var(--font-second);
+  font-size:      0.68rem;
+  font-weight:    500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          var(--meta-color);
+  margin-top:     0.05rem;
+  padding-left:   0.1rem;
+}
+
+nav {
+  display:    flex;
+  gap:        0.35rem;
+  flex-wrap:  wrap;
+  justify-content: flex-end;
+}
+
+a.nav-tab {
+  font-family:     var(--font-second);
+  font-size:       0.8rem;
+  font-weight:     500;
+  letter-spacing:  0.03em;
+  color:           var(--heading-color);
+  text-decoration: none;
+  padding:         0.35em 0.9em;
+  border-radius:   99px;
+  border:          1px solid var(--border-color);
+  transition:      background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+a.nav-tab:hover {
+  background:   color-mix(in srgb, var(--text-color) 8%, var(--background-color));
+  border-color: var(--text-color);
+  color:        var(--heading-color);
+}
+
+a.nav-tab.nav-tab--active {
+  background:   var(--link-color);
+  color:        #fff;
+  border-color: var(--link-color);
+  font-weight:  700;
+}
+
+a.nav-tab.nav-tab--active:hover {
+  opacity: 0.88;
+  color:   #fff;
 }
 
 /* ── Links ────────────────────────────────────────────────────────────── */
@@ -549,6 +655,14 @@ footer {
 @media (max-width: 720px) {
   body        { font-size: 17px; }
   article h1  { font-size: 1.6rem; }
+
+  header {
+    flex-direction: column;
+    align-items:    flex-start;
+    gap:            0.75rem;
+  }
+
+  nav { justify-content: flex-start; }
 
   .post-card a.post-card-link {
     flex-direction: column;
