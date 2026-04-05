@@ -973,8 +973,9 @@ footer {
 }
 
 .races-feature-stats {
-  display: flex;
-  gap:     1.25rem;
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       1rem 1.25rem;
   flex-shrink: 0;
 }
 
@@ -1002,5 +1003,6 @@ footer {
 
 @media (max-width: 600px) {
   .races-feature-card  { flex-direction: column; align-items: flex-start; }
-  .races-feature-stats { gap: 1rem; }
+  .races-feature-stats { gap: 0.75rem 1.25rem; }
+  .races-feature-num   { font-size: 1.1rem; }
 }
