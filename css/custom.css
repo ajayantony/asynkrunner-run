@@ -898,3 +898,98 @@ footer {
   opacity:    0.55;
   margin-top: 0.2rem;
 }
+
+/* ── Races feature card ──────────────────────────────────────────────── */
+.races-feature-card {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  gap:             1.5rem;
+  margin:          1.75rem 0;
+  padding:         1.5rem 1.75rem;
+  border:          1px solid color-mix(in srgb, var(--link-color) 35%, var(--border-color));
+  border-radius:   14px;
+  background:      color-mix(in srgb, var(--link-color) 6%, var(--background-color));
+  text-decoration: none;
+  transition:      border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.races-feature-card:hover {
+  border-color: var(--link-color);
+  background:   color-mix(in srgb, var(--link-color) 10%, var(--background-color));
+  transform:    translateY(-2px);
+}
+
+.races-feature-left {
+  display:        flex;
+  flex-direction: column;
+  gap:            0.35rem;
+  flex:           1;
+}
+
+.races-feature-label {
+  font-family:    var(--font-second);
+  font-size:      0.7rem;
+  font-weight:    700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color:          var(--link-color);
+  opacity:        0.8;
+}
+
+.races-feature-title {
+  font-family: var(--font-second);
+  font-size:   1.15rem;
+  font-weight: 700;
+  color:       var(--text-color);
+  margin:      0;
+}
+
+.races-feature-desc {
+  font-size:   0.88rem;
+  color:       var(--text-color);
+  opacity:     0.65;
+  margin:      0;
+  line-height: 1.4;
+}
+
+.races-feature-cta {
+  font-family: var(--font-second);
+  font-size:   0.85rem;
+  font-weight: 600;
+  color:       var(--link-color);
+  margin-top:  0.25rem;
+}
+
+.races-feature-stats {
+  display: flex;
+  gap:     1.25rem;
+  flex-shrink: 0;
+}
+
+.races-feature-stat {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            0.15rem;
+}
+
+.races-feature-num {
+  font-family: var(--font-second);
+  font-size:   1.3rem;
+  font-weight: 700;
+  color:       var(--link-color);
+}
+
+.races-feature-statlabel {
+  font-family: var(--font-second);
+  font-size:   0.7rem;
+  color:       var(--text-color);
+  opacity:     0.5;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .races-feature-card  { flex-direction: column; align-items: flex-start; }
+  .races-feature-stats { gap: 1rem; }
+}
