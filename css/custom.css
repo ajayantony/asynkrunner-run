@@ -607,9 +607,20 @@ ul.post-cards {
 }
 
 .post-card a.post-card-link:hover {
-  border-color: var(--link-color);
-  box-shadow:   0 4px 16px rgba(0, 0, 0, 0.08);
-  transform:    translateY(-2px);
+  border-color:    var(--link-color);
+  box-shadow:      0 4px 16px rgba(0, 0, 0, 0.08);
+  transform:       translateY(-2px);
+  text-decoration: none;
+}
+
+.topic-card,
+.topic-card:hover,
+.races-feature-card,
+.races-feature-card:hover,
+.post-card a.post-card-link,
+ul.pinned-cards .post-card-link,
+ul.pinned-cards .post-card-link:hover {
+  text-decoration: none;
 }
 
 .post-card-thumb {
