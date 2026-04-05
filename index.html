@@ -31,7 +31,86 @@ This is where I write about building software, cooking up recipes, and logging m
 <span class=topic-card-count>1 post</span>
 </a><a href=https://asynkrunner.com/tags/health/ class=topic-card><span class=topic-card-icon>🥗</span>
 <span class=topic-card-label>Health</span>
-<span class=topic-card-count>1 post</span></a></div><h2 class="posts-heading pinned-heading"><span class=pin-icon>📌</span> Pinned</h2><ul class="post-cards pinned-cards"><li class=post-card data-tags="running half-marathon origin-story 50-states"><a href=https://asynkrunner.com/posts/my-unexpected-journey-into-long-distance-running/ class=post-card-link><img src=https://asynkrunner.com/images/my-unexpected-journey-into-long-distance-running/f011fd1a-8b43-4c25-bbb5-5f6f965c97a8.jpg alt="My Unexpected Journey into Long-Distance Running" class=post-card-thumb><div class=post-card-body><div class=post-card-title>My Unexpected Journey into Long-Distance Running
+<span class=topic-card-count>1 post</span></a></div><h2 class="posts-heading trending-heading">🔥 Trending</h2><ul class=post-cards id=trending-cards><li class=trending-loading>Loading…</li></ul><script type=application/json id=all-posts-data>[{"slug":"posts--lent-and-a-healthier-me","title":"\"Lent and a Healthier Me\"","url":"\"https://asynkrunner.com/posts/lent-and-a-healthier-me/\"","thumbnail":"\"\""},{"slug":"posts--find-your-starting-line-the-race","title":"\"Find Your Starting Line: The Race\"","url":"\"https://asynkrunner.com/posts/find-your-starting-line-the-race/\"","thumbnail":"\"/images/find-your-starting-line-the-race/Screenshot-2025-03-28-at-10.48.25-PM-1-1024x415.png\""},{"slug":"posts--racing-the-sunshine-state","title":"\"Racing the Sunshine State\"","url":"\"https://asynkrunner.com/posts/racing-the-sunshine-state/\"","thumbnail":"\"/images/racing-the-sunshine-state/7d136499-02d9-4a57-9ff4-7c965b6df3a4-768x1024.jpg\""},{"slug":"posts--my-running-journey-from-zero-to-half-marathon","title":"\"My Running Journey: From Zero to Half Marathon\"","url":"\"https://asynkrunner.com/posts/my-running-journey-from-zero-to-half-marathon/\"","thumbnail":"\"\""},{"slug":"posts--my-unexpected-journey-into-long-distance-running","title":"\"My Unexpected Journey into Long-Distance Running\"","url":"\"https://asynkrunner.com/posts/my-unexpected-journey-into-long-distance-running/\"","thumbnail":"\"/images/my-unexpected-journey-into-long-distance-running/f011fd1a-8b43-4c25-bbb5-5f6f965c97a8.jpg\""}]</script><script type=module>
+    import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+    import { getFirestore, doc, getDoc, collection, getCountFromServer }
+      from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDraPG08Z5c3bwgD4NEoPfpsJmnBDB6NXI",
+      authDomain: "asynkrunner.firebaseapp.com", projectId: "asynkrunner",
+      storageBucket: "asynkrunner.firebasestorage.app",
+      messagingSenderId: "298956678651",
+      appId: "1:298956678651:web:1d6fe195f534d00972575e"
+    };
+
+    const app   = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+    const db    = getFirestore(app);
+    const posts = JSON.parse(document.getElementById('all-posts-data').textContent);
+
+    async function fetchScore(slug) {
+      const [viewSnap, reactionSnap, commentCount] = await Promise.all([
+        getDoc(doc(db, 'views', slug)),
+        getDoc(doc(db, 'reactions', slug)),
+        getCountFromServer(collection(db, 'comments', slug, 'entries'))
+          .then(s => s.data().count).catch(() => 0)
+      ]);
+      const views   = viewSnap.exists()     ? (viewSnap.data().count     || 0) : 0;
+      const claps   = reactionSnap.exists() ? (reactionSnap.data().claps || 0) : 0;
+      const likes   = reactionSnap.exists() ? (reactionSnap.data().likes || 0) : 0;
+      return views + (claps * 2) + (likes * 2) + (commentCount * 3);
+    }
+
+    async function renderTrending() {
+      const container = document.getElementById('trending-cards');
+      try {
+        const scored = await Promise.all(
+          posts.map(async p => ({ ...p, score: await fetchScore(p.slug) }))
+        );
+        const top = scored.sort((a, b) => b.score - a.score).slice(0, 3);
+
+        container.innerHTML = '';
+        if (top.every(p => p.score === 0)) {
+          const li = document.createElement('li');
+          li.className = 'trending-empty';
+          li.textContent = 'Not enough data yet — check back soon!';
+          container.appendChild(li);
+          return;
+        }
+        top.forEach(p => {
+          const li = document.createElement('li');
+          li.className = 'post-card';
+          const a = document.createElement('a');
+          a.href = p.url;
+          a.className = 'post-card-link';
+          if (p.thumbnail) {
+            const img = document.createElement('img');
+            img.src = p.thumbnail;
+            img.alt = p.title;
+            img.className = 'post-card-thumb';
+            a.appendChild(img);
+          }
+          const body = document.createElement('div');
+          body.className = 'post-card-body';
+          const title = document.createElement('div');
+          title.className = 'post-card-title';
+          title.textContent = p.title;
+          const meta = document.createElement('div');
+          meta.className = 'post-card-meta trending-score';
+          meta.textContent = '🔥 ' + p.score + ' engagement points';
+          body.appendChild(title);
+          body.appendChild(meta);
+          a.appendChild(body);
+          li.appendChild(a);
+          container.appendChild(li);
+        });
+      } catch (err) {
+        container.innerHTML = '';
+      }
+    }
+
+    renderTrending();
+  </script><h2 class="posts-heading pinned-heading"><span class=pin-icon>📌</span> Pinned</h2><ul class="post-cards pinned-cards"><li class=post-card data-tags="running half-marathon origin-story 50-states"><a href=https://asynkrunner.com/posts/my-unexpected-journey-into-long-distance-running/ class=post-card-link><img src=https://asynkrunner.com/images/my-unexpected-journey-into-long-distance-running/f011fd1a-8b43-4c25-bbb5-5f6f965c97a8.jpg alt="My Unexpected Journey into Long-Distance Running" class=post-card-thumb><div class=post-card-body><div class=post-card-title>My Unexpected Journey into Long-Distance Running
 <span class=badge-pinned>Pinned</span></div><div class=post-card-meta><time datetime=2025-03-27>27 Mar, 2025</time>
 <span class=post-card-tag>#running</span>
 <span class=post-card-tag>#half-marathon</span>

@@ -7,7 +7,26 @@
 <a href=https://asynkrunner.com/tags/florida/>#Florida</a>
 <a href=https://asynkrunner.com/tags/half-marathon/>#Half-Marathon</a>
 <a href=https://asynkrunner.com/tags/running/>#Running</a>
-<a href=https://asynkrunner.com/tags/travel/>#Travel</a></p></main><footer><a href=https://www.flaticon.com/free-icons/runner title="runner icons">Runner icons created by Freepik - Flaticon</a></footer><div id=post-engagement><div class=reactions-bar><button class=reaction-btn id=btn-clap aria-label=Clap>
+<a href=https://asynkrunner.com/tags/travel/>#Travel</a></p></main><footer><a href=https://www.flaticon.com/free-icons/runner title="runner icons">Runner icons created by Freepik - Flaticon</a></footer><script type=module>
+  import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import { getFirestore, doc, setDoc, increment } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyDraPG08Z5c3bwgD4NEoPfpsJmnBDB6NXI",
+    authDomain: "asynkrunner.firebaseapp.com", projectId: "asynkrunner",
+    storageBucket: "asynkrunner.firebasestorage.app",
+    messagingSenderId: "298956678651",
+    appId: "1:298956678651:web:1d6fe195f534d00972575e"
+  };
+  const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+  const db  = getFirestore(app);
+  const slug = window.location.pathname.replace(/^\/|\/$/g, '').replace(/\//g, '--') || 'home';
+  
+  if (!sessionStorage.getItem('viewed--' + slug)) {
+    sessionStorage.setItem('viewed--' + slug, '1');
+    setDoc(doc(db, 'views', slug), { count: increment(1) }, { merge: true })
+      .catch(() => {});
+  }
+</script><div id=post-engagement><div class=reactions-bar><button class=reaction-btn id=btn-clap aria-label=Clap>
 👏 <span id=count-clap>0</span>
 </button>
 <button class=reaction-btn id=btn-like aria-label=Like>

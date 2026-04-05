@@ -881,3 +881,20 @@ footer {
   line-height: 1.6;
   margin:      0;
 }
+
+/* ── Trending section ────────────────────────────────────────────────── */
+.trending-heading { margin-top: 2.5rem; }
+
+.trending-loading,
+.trending-empty {
+  font-size:  0.9rem;
+  opacity:    0.45;
+  list-style: none;
+  padding:    0.5rem 0;
+}
+
+.trending-score {
+  font-size:  0.78rem;
+  opacity:    0.55;
+  margin-top: 0.2rem;
+}
