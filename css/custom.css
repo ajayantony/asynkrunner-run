@@ -145,8 +145,7 @@ header .title {
   font-family:    var(--font-second);
   font-size:      0.68rem;
   font-weight:    500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color:          var(--meta-color);
   margin-top:     0.05rem;
   padding-left:   0.1rem;
