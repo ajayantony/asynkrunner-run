@@ -9,7 +9,7 @@
 
 /* ── Root overrides ───────────────────────────────────────────────────── */
 :root {
-  --width:        680px;
+  --width:        960px;
   --font-main:    "Lora", Georgia, "Times New Roman", serif;
   --font-second:  "Inter", system-ui, -apple-system, sans-serif;
 
