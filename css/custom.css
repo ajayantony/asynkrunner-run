@@ -550,6 +550,42 @@ hr {
   margin-bottom: 1rem;
 }
 
+.pinned-heading {
+  display:     flex;
+  align-items: center;
+  gap:         0.4rem;
+}
+
+.pin-icon { font-size: 1rem; line-height: 1; }
+
+ul.pinned-cards .post-card-link {
+  border-color: color-mix(in srgb, var(--link-color) 35%, var(--border-color));
+  background:   color-mix(in srgb, var(--link-color) 5%, var(--background-color));
+}
+
+ul.pinned-cards .post-card-link:hover {
+  border-color: var(--link-color);
+  background:   color-mix(in srgb, var(--link-color) 10%, var(--background-color));
+}
+
+.badge-pinned {
+  display:        inline-block;
+  font-family:    var(--font-second);
+  font-size:      0.62rem;
+  font-weight:    700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color:          var(--link-color);
+  background:     color-mix(in srgb, var(--link-color) 12%, var(--background-color));
+  border:         1px solid color-mix(in srgb, var(--link-color) 30%, var(--border-color));
+  padding:        0.15em 0.5em;
+  border-radius:  4px;
+  vertical-align: middle;
+  margin-left:    0.4rem;
+  position:       relative;
+  top:            -1px;
+}
+
 /* ── Post cards ──────────────────────────────────────────────────────── */
 ul.post-cards {
   list-style: none;
