@@ -573,7 +573,7 @@ ul.post-cards {
   width:       100px;
   height:      70px;
   object-fit:  cover;
-  object-position: center;
+  object-position: top center;
   border-radius: 6px;
   flex-shrink: 0;
   border:      1px solid var(--border-color);
