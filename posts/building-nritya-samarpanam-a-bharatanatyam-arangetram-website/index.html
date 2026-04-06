@@ -1,0 +1,167 @@
+<!doctype html><html lang=en-us><head><meta http-equiv=X-Clacks-Overhead content="GNU Terry Pratchett"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://asynkrunner.com/images/icon-runner.png><title>Building Nritya Samarpanam - A Bharatanatyam Arangetram Website | The AsynKrunner: Bytes, Bites & Miles</title>
+<meta name=title content="Building Nritya Samarpanam - A Bharatanatyam Arangetram Website"><meta name=description content="How I built a static website for my wife's Bharatanatyam Arangetram - from a blank folder to a live site with galleries, a guest book, countdown timer, and background music. A behind-the-scenes look at the craft and decisions that went into nrityasamarpanam.art."><meta name=keywords content="software,web-development,projects,design,"><meta property="og:url" content="https://asynkrunner.com/posts/building-nritya-samarpanam-a-bharatanatyam-arangetram-website/"><meta property="og:site_name" content="The AsynKrunner: Bytes, Bites & Miles"><meta property="og:title" content="Building Nritya Samarpanam - A Bharatanatyam Arangetram Website"><meta property="og:description" content="How I built a static website for my wife's Bharatanatyam Arangetram - from a blank folder to a live site with galleries, a guest book, countdown timer, and background music. A behind-the-scenes look at the craft and decisions that went into nrityasamarpanam.art."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2026-04-05T00:00:00+00:00"><meta property="article:modified_time" content="2026-04-05T00:00:00+00:00"><meta property="article:tag" content="Software"><meta property="article:tag" content="Web-Development"><meta property="article:tag" content="Projects"><meta property="article:tag" content="Design"><meta name=twitter:card content="summary"><meta name=twitter:title content="Building Nritya Samarpanam - A Bharatanatyam Arangetram Website"><meta name=twitter:description content="How I built a static website for my wife's Bharatanatyam Arangetram - from a blank folder to a live site with galleries, a guest book, countdown timer, and background music. A behind-the-scenes look at the craft and decisions that went into nrityasamarpanam.art."><meta itemprop=name content="Building Nritya Samarpanam - A Bharatanatyam Arangetram Website"><meta itemprop=description content="How I built a static website for my wife's Bharatanatyam Arangetram - from a blank folder to a live site with galleries, a guest book, countdown timer, and background music. A behind-the-scenes look at the craft and decisions that went into nrityasamarpanam.art."><meta itemprop=datePublished content="2026-04-05T00:00:00+00:00"><meta itemprop=dateModified content="2026-04-05T00:00:00+00:00"><meta itemprop=wordCount content="940"><meta itemprop=keywords content="Software,Web-Development,Projects,Design"><meta name=referrer content="no-referrer-when-downgrade"><style>:root{--width:720px;--font-main:Verdana, sans-serif;--font-secondary:Verdana, sans-serif;--font-scale:1em;--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}@media(prefers-color-scheme:dark){:root{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}}body{font-family:var(--font-secondary);font-size:var(--font-scale);margin:auto;padding:20px;max-width:var(--width);text-align:left;background-color:var(--background-color);word-wrap:break-word;overflow-wrap:break-word;line-height:1.5;color:var(--text-color)}h1,h2,h3,h4,h5,h6{font-family:var(--font-main);color:var(--heading-color)}a{color:var(--link-color);cursor:pointer;text-decoration:none}a:hover{text-decoration:underline}nav a{margin-right:8px}strong,b{color:var(--heading-color)}button{margin:0;cursor:pointer}time{font-family:monospace;font-style:normal;font-size:15px}main{line-height:1.6}table{width:100%}hr{border:0;border-top:1px dashed}img{max-width:100%}code{font-family:monospace;padding:2px;border-radius:3px}blockquote{border-left:1px solid #999;color:var(--blockquote-color);padding-left:20px;font-style:italic}footer{padding:25px 0;text-align:center}.title:hover{text-decoration:none}.title h1{font-size:1.5em}.inline{width:auto!important}.highlight,.code{border-radius:3px;margin-block-start:1em;margin-block-end:1em;overflow-x:auto}ul.blog-posts{list-style-type:none;padding:unset}ul.blog-posts li{display:flex}ul.blog-posts li span{flex:0 0 130px}ul.blog-posts li a:visited{color:var(--visited-color)}</style><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel=stylesheet><meta name=referrer content="strict-origin-when-cross-origin"><meta property="og:site_name" content="AsynKrunner.com"><link rel=canonical href=https://asynkrunner.com/posts/building-nritya-samarpanam-a-bharatanatyam-arangetram-website/><meta property="og:image" content="https://asynkrunner.com/images/icon-runner.png"><meta name=twitter:image content="https://asynkrunner.com/images/icon-runner.png"><link rel=stylesheet href=https://asynkrunner.com/css/custom.css><script async src="https://www.googletagmanager.com/gtag/js?id=G-GLJPR7B2B4"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-GLJPR7B2B4")</script></head><body><header><a href=https://asynkrunner.com/ class=title><div class=brand-icon-wrap><svg class="brand-monitor-svg" viewBox="0 0 40 44"><rect x="1" y="1" width="38" height="30" rx="5" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="5" y="5" width="30" height="22" rx="2" fill="rgba(255,255,255,0.15)"/><line x1="9" y1="11" x2="22" y2="11" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity=".85"/><line x1="9" y1="16" x2="27" y2="16" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity=".85"/><line x1="9" y1="21" x2="19" y2="21" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity=".65"/><rect x="17" y="31" width="6" height="7" rx="1.5" fill="#fff" opacity=".9"/><rect x="10" y="38" width="20" height="3.5" rx="2" fill="#fff" opacity=".9"/></svg>
+<img src=https://asynkrunner.com/images/icon-runner.png class=brand-runner-img alt=runner></div><div class=brand><span class=brand-name>The Asyn<span class=brand-k>K</span>runner</span>
+<span class=brand-tagline>Bytes, Bites & Miles</span></div></a><nav><a href=/ class=nav-tab>Bytes, Bites & Miles</a>
+<a href=/races/ class=nav-tab>Races</a>
+<a href=/blog/ class="nav-tab nav-tab--active">Blog</a></nav></header><main><h1>Building Nritya Samarpanam - A Bharatanatyam Arangetram Website</h1><p><i><time datetime=2026-04-05>05 Apr, 2026</time></i></p><content><p>Some projects are just work. And then there are the ones that mean something.</p><p>This past year my wife Anitha has been preparing for her Arangetram - the formal graduation recital in Bharatanatyam, a classical Indian dance form. Months of early mornings, late evenings, and a kind of dedication I have a deep respect for. When it came time to tell the world about the event, I wanted to do it right. Not just a PDF flyer or a WhatsApp message - a proper website, built with care.</p><p>The result is <a href=https://nrityasamarpanam.art>nrityasamarpanam.art</a> - a site for my wife Anitha and her fellow dancer Sreyoshi, who are performing together on April 18, 2026 at the India Community Center in Macedon, NY.</p><p>Here is how I built it.</p><h2 id=starting-from-scratch>Starting From Scratch</h2><p>The site is intentionally a static site - no frameworks, no build pipelines, no JavaScript bloat. Just HTML, CSS, and vanilla JS. For something like this, simplicity is the right call. It needs to load fast on every device, work offline after first load, and be easy to update without a deployment headache.</p><p>The design language is dark and elegant - deep near-black backgrounds, warm gold accents, and Cormorant Garamond for the display type. Classical dance deserves a classical aesthetic.</p><h2 id=the-pages>The Pages</h2><p>The site has seven pages:</p><ul><li><strong>Home</strong> - hero slideshow, countdown timer, meet-the-dancers cards, background music</li><li><strong>Anitha</strong> - biography, portrait, personal photo gallery</li><li><strong>Sreyoshi</strong> - biography, portrait, personal photo gallery with 20 photos</li><li><strong>Gallery</strong> - full combined gallery with filter tabs (All, Anitha, Sreyoshi, Both)</li><li><strong>Our Guru</strong> - profile of Guru Parvatha Chidambaram and Bharata School of Dance</li><li><strong>Event & RSVP</strong> - venue details, schedule, what to expect, RSVP link</li><li><strong>Guest Book</strong> - visitors can leave congratulations messages</li></ul><h2 id=things-im-proud-of>Things I&rsquo;m Proud Of</h2><h3 id=the-gallery>The Gallery</h3><p>The gallery was one of the more interesting engineering problems. Photos are filtered by dancer using data attributes, and the &ldquo;All Photos&rdquo; tab shuffles the order randomly on every page load. Switch to &ldquo;Anitha&rdquo; or &ldquo;Sreyoshi&rdquo; and you get them in their natural numbered order.</p><p>The trickier part was making the lightbox (GLightbox) respect the active filter. By default, clicking a photo and hitting the arrow navigated through <em>all</em> photos regardless of which tab was active. The fix was to destroy and reinitialize the lightbox instance after each filter change, using a selector scoped to the active <code>data-dancer</code> attribute. Small detail. Big difference in experience.</p><h3 id=the-guest-book>The Guest Book</h3><p>The Guest Book lets visitors leave congratulatory messages. Since it&rsquo;s a public form, I built in two layers of protection against abuse:</p><ol><li><strong>Honeypot field</strong> - a hidden input that real users never see but bots tend to fill in. Any submission with that field populated is silently discarded.</li><li><strong>Manual moderation</strong> - submissions go to Firebase Firestore without an <code>approved</code> field. Only entries explicitly approved via the Firebase console (by me) are shown to the public. Visitors are told upfront that messages are reviewed before appearing.</li></ol><p>It&rsquo;s simple, effective, and requires no third-party moderation service.</p><h3 id=background-music>Background Music</h3><p>The home page plays a Carnatic music clip that loops between the 2 second and 55 second mark - the sweetest part of the piece. Getting this to work reliably across browsers, especially Safari on iOS, took more iterations than I expected.</p><p>The core issue: iOS Safari won&rsquo;t allow <code>audio.currentTime</code> to be set until <em>after</em> <code>play()</code> resolves, not before. Setting <code>currentTime = 2</code> synchronously before calling <code>play()</code> is silently ignored. The fix was to seek inside the <code>.then()</code> callback after the play promise resolves.</p><p>For the loop boundary, I use both a <code>timeupdate</code> listener (fires every ~250ms) and an <code>ended</code> fallback in case the boundary is missed.</p><h3 id=the-photographer-credit>The Photographer Credit</h3><p>All photos were taken by <strong>Vikram Chandran</strong> (<a href=https://www.instagram.com/revealtrumpet_media>@revealtrumpet_media</a>). I wanted to give him proper credit without it being disruptive - a subtle footer line on every page plus a more prominent placement above the gallery grid. Tasteful, present, and clickable.</p><h2 id=the-stack>The Stack</h2><ul><li><strong>HTML/CSS/JS</strong> - no framework</li><li><strong>Fonts</strong> - Cormorant Garamond (display), Cinzel (accents), Raleway (body)</li><li><strong>Animations</strong> - AOS (Animate On Scroll)</li><li><strong>Lightbox</strong> - GLightbox</li><li><strong>Guest Book backend</strong> - Firebase Firestore</li><li><strong>Analytics</strong> - Google Analytics (gtag)</li><li><strong>Hosting</strong> - GitHub Pages on a custom domain</li></ul><h2 id=what-i-learned>What I Learned</h2><p>A few things that surprised me along the way:</p><p><strong>macOS is case-insensitive. Linux is not.</strong> A photo was named <code>sreyoshi-home.JPG</code> in git but referenced as <code>.jpg</code> in HTML. Works perfectly on macOS. 404 on GitHub Pages (Linux). The fix was to create an entirely new file with an unambiguous name rather than try to rename in git - which would have required force-pushing to fix the index.</p><p><strong>CSS <code>columns</code> flows top-to-bottom, not left-to-right.</strong> The gallery originally used <code>columns: 3</code> which gives a masonry layout but flows items down each column. For sequentially numbered photos, that meant photo 1, 4, 7 across the top row. Switching to CSS Grid (<code>grid-template-columns: repeat(3, 1fr)</code>) fixed the reading order to left-to-right.</p><p><strong><code>pagehide</code> fires after async callbacks complete, not before.</strong> When I tried to persist the music player state across page navigations using <code>sessionStorage</code>, the state was saving as <code>false</code> even when music was playing. The culprit: <code>isPlaying</code> was set in a promise <code>.then()</code> callback that hadn&rsquo;t resolved yet when navigation happened. Switching to <code>!audio.paused</code> - which is set synchronously when <code>play()</code> is called - fixed it.</p><h2 id=signing-this-one>Signing This One</h2><p>This site is credited as <em>An AsynKrunner Creation</em> - that&rsquo;s me. It&rsquo;s the first site I&rsquo;ve built and shipped under that name, and it happens to be for something that matters a lot to my family. A good one to start with.</p><p>If you&rsquo;re in the Upstate NY area on April 18, 2026, come watch. It will be beautiful.</p><p>→ <a href=https://nrityasamarpanam.art>nrityasamarpanam.art</a></p></content><p><a href=https://asynkrunner.com/tags/software/>#Software</a>
+<a href=https://asynkrunner.com/tags/web-development/>#Web-Development</a>
+<a href=https://asynkrunner.com/tags/projects/>#Projects</a>
+<a href=https://asynkrunner.com/tags/design/>#Design</a></p></main><footer><a href=https://www.flaticon.com/free-icons/runner title="runner icons">Runner icons created by Freepik - Flaticon</a></footer><script type=module>
+  import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import { getFirestore, doc, setDoc, increment } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyDraPG08Z5c3bwgD4NEoPfpsJmnBDB6NXI",
+    authDomain: "asynkrunner.firebaseapp.com", projectId: "asynkrunner",
+    storageBucket: "asynkrunner.firebasestorage.app",
+    messagingSenderId: "298956678651",
+    appId: "1:298956678651:web:1d6fe195f534d00972575e"
+  };
+  const app  = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+  const db   = getFirestore(app);
+  const slug = window.location.pathname.replace(/^\/|\/$/g, '').replace(/\//g, '--') || 'home';
+  if (!sessionStorage.getItem('viewed--' + slug)) {
+    sessionStorage.setItem('viewed--' + slug, '1');
+    setDoc(doc(db, 'views', slug), { count: increment(1) }, { merge: true }).catch(() => {});
+  }
+</script><div id=post-engagement><div class=reactions-bar><button class=reaction-btn id=btn-clap aria-label=Clap>
+👏 <span id=count-clap>0</span>
+</button>
+<button class=reaction-btn id=btn-like aria-label=Like>
+❤️ <span id=count-like>0</span></button></div><div class=comments-section><h3 class=comments-heading>Comments</h3><form id=comment-form class=comment-form novalidate><input id=comment-name class=comment-input type=text placeholder="Your name" maxlength=80 required>
+<textarea id=comment-body class="comment-input comment-textarea" placeholder="Leave a comment…" maxlength=1000 required></textarea>
+<button type=submit class=comment-submit>Post comment</button>
+<span id=comment-status class=comment-status></span></form><ul id=comment-list class=comment-list></ul></div></div><script type=module>
+  import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import { getFirestore, doc, collection, addDoc, setDoc, onSnapshot,
+           query, orderBy, serverTimestamp }
+    from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+  import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey:            "AIzaSyDraPG08Z5c3bwgD4NEoPfpsJmnBDB6NXI",
+    authDomain:        "asynkrunner.firebaseapp.com",
+    projectId:         "asynkrunner",
+    storageBucket:     "asynkrunner.firebasestorage.app",
+    messagingSenderId: "298956678651",
+    appId:             "1:298956678651:web:1d6fe195f534d00972575e"
+  };
+
+  const app  = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+  const db   = getFirestore(app);
+  const auth = getAuth(app);
+  signInAnonymously(auth).catch(() => {});
+
+  const slugOverride = "";
+  const slug = slugOverride ||
+    window.location.pathname.replace(/^\/|\/$/g, '').replace(/\//g, '--') || 'home';
+
+  const reactionsRef = doc(db, 'reactions', slug);
+  const commentsRef  = collection(db, 'comments', slug, 'entries');
+
+  
+  const storageKey = 'reacted--' + slug;
+  const reacted    = JSON.parse(localStorage.getItem(storageKey) || '{}');
+  let currentReactions = { claps: 0, likes: 0 };
+  const reactionInFlight = {};
+
+  function updateReactionUI() {
+    document.getElementById('count-clap').textContent = currentReactions.claps;
+    document.getElementById('count-like').textContent = currentReactions.likes;
+    document.getElementById('btn-clap').classList.toggle('reaction-btn--active', !!reacted.clap);
+    document.getElementById('btn-like').classList.toggle('reaction-btn--active', !!reacted.like);
+  }
+
+  onSnapshot(reactionsRef, snap => {
+    if (snap.exists()) {
+      const d = snap.data();
+      currentReactions = {
+        claps: Number.isInteger(d.claps) && d.claps >= 0 ? d.claps : 0,
+        likes: Number.isInteger(d.likes) && d.likes >= 0 ? d.likes : 0
+      };
+    }
+    updateReactionUI();
+  });
+
+  async function handleReaction(type) {
+    if (reacted[type] || reactionInFlight[type]) return;
+    reactionInFlight[type] = true;
+    reacted[type] = true;
+    localStorage.setItem(storageKey, JSON.stringify(reacted));
+    if (type === 'clap') currentReactions.claps += 1;
+    else currentReactions.likes += 1;
+    updateReactionUI();
+    try {
+      await setDoc(reactionsRef, { claps: currentReactions.claps, likes: currentReactions.likes });
+    } catch (err) {
+      console.error('Reaction error:', err);
+      if (type === 'clap') currentReactions.claps -= 1;
+      else currentReactions.likes -= 1;
+      reacted[type] = false;
+      localStorage.setItem(storageKey, JSON.stringify(reacted));
+      updateReactionUI();
+    } finally {
+      reactionInFlight[type] = false;
+    }
+  }
+
+  document.getElementById('btn-clap').addEventListener('click', () => handleReaction('clap'));
+  document.getElementById('btn-like').addEventListener('click', () => handleReaction('like'));
+
+  
+  const form   = document.getElementById('comment-form');
+  const status = document.getElementById('comment-status');
+  const list   = document.getElementById('comment-list');
+
+  onSnapshot(query(commentsRef, orderBy('createdAt', 'asc')), snap => {
+    while (list.firstChild) list.removeChild(list.firstChild);
+    if (snap.empty) {
+      const p = document.createElement('p');
+      p.className = 'comment-empty';
+      p.textContent = 'No comments yet — be the first!';
+      list.appendChild(p);
+      return;
+    }
+    snap.forEach(d => {
+      const data = d.data();
+      const ts   = data.createdAt?.toDate();
+      const date = ts ? ts.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' }) : '';
+      const li       = document.createElement('li');
+      li.className   = 'comment-item';
+      const nameEl   = document.createElement('div');
+      nameEl.className = 'comment-author';
+      const nameText = document.createElement('span');
+      nameText.textContent = data.name;
+      const dateText = document.createElement('span');
+      dateText.className   = 'comment-date';
+      dateText.textContent = date;
+      nameEl.appendChild(nameText);
+      nameEl.appendChild(dateText);
+      const bodyEl     = document.createElement('p');
+      bodyEl.className = 'comment-body';
+      bodyEl.textContent = data.body;
+      li.appendChild(nameEl);
+      li.appendChild(bodyEl);
+      list.appendChild(li);
+    });
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const name = document.getElementById('comment-name').value.trim();
+    const body = document.getElementById('comment-body').value.trim();
+    if (name.length < 2 || body.length < 3) {
+      status.textContent = 'Please enter a name (2+ chars) and comment (3+ chars).';
+      return;
+    }
+    status.textContent = 'Posting…';
+    try {
+      await addDoc(commentsRef, { name, body, createdAt: serverTimestamp() });
+      form.reset();
+      status.textContent = 'Comment posted!';
+      setTimeout(() => { status.textContent = ''; }, 3000);
+    } catch (err) {
+      console.error('Comment error:', err);
+      status.textContent = 'Error — please try again.';
+    }
+  });
+</script></body></html>
