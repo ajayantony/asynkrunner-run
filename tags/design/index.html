@@ -3,12 +3,47 @@
 <img src=https://asynkrunner.com/images/icon-runner.png class=brand-runner-img alt=runner></div><div class=brand><span class=brand-name>The Asyn<span class=brand-k>K</span>runner</span>
 <span class=brand-tagline>Bytes, Bites & Miles</span></div></a><nav><a href=/ class=nav-tab>Bytes, Bites & Miles</a>
 <a href=/races/ class=nav-tab>Races</a>
-<a href=/blog/ class=nav-tab>Blog</a></nav></header><main><div class=blog-layout><div class=blog-main><h3 class=filter-heading>Filtering for "Design"
-<a href=/blog class=filter-clear>✕ clear</a></h3><ul class=post-cards><li class=post-card data-tags="software web-development projects design"><a href=https://asynkrunner.com/posts/building-nritya-samarpanam-a-bharatanatyam-arangetram-website/ class=post-card-link><div class=post-card-body><div class=post-card-title>Building Nritya Samarpanam - A Bharatanatyam Arangetram Website</div><div class=post-card-meta><time datetime=2026-04-05>05 Apr, 2026</time>
+<a href=/blog/ class=nav-tab>Blog</a></nav></header><main><script type=module>
+  import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import { getFirestore, doc, getDoc, collection, getCountFromServer }
+    from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDraPG08Z5c3bwgD4NEoPfpsJmnBDB6NXI",
+    authDomain: "asynkrunner.firebaseapp.com", projectId: "asynkrunner",
+    storageBucket: "asynkrunner.firebasestorage.app",
+    messagingSenderId: "298956678651",
+    appId: "1:298956678651:web:1d6fe195f534d00972575e"
+  };
+  const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+  const db  = getFirestore(app);
+
+  document.querySelectorAll('.post-card[data-slug]').forEach(async card => {
+    const slug = card.dataset.slug;
+    const el   = card.querySelector('.post-card-engagement');
+    if (!el) return;
+    try {
+      const [viewSnap, reactionSnap, commentCount] = await Promise.all([
+        getDoc(doc(db, 'views', slug)).catch(() => null),
+        getDoc(doc(db, 'reactions', slug)).catch(() => null),
+        getCountFromServer(collection(db, 'comments', slug, 'entries'))
+          .then(s => s.data().count).catch(() => 0)
+      ]);
+      const views     = viewSnap?.exists()     ? (viewSnap.data().count     || 0) : 0;
+      const claps     = reactionSnap?.exists() ? (reactionSnap.data().claps || 0) : 0;
+      const likes     = reactionSnap?.exists() ? (reactionSnap.data().likes || 0) : 0;
+      const reactions = claps + likes;
+      if (views > 0 || reactions > 0 || commentCount > 0) {
+        el.textContent = views + ' reads | ' + reactions + ' reactions | ' + commentCount + ' comments';
+      }
+    } catch (_) {}
+  });
+</script><div class=blog-layout><div class=blog-main><h3 class=filter-heading>Filtering for "Design"
+<a href=/blog class=filter-clear>✕ clear</a></h3><ul class=post-cards><li class=post-card data-tags="software web-development projects design" data-slug=posts--building-nritya-samarpanam-a-bharatanatyam-arangetram-website><a href=https://asynkrunner.com/posts/building-nritya-samarpanam-a-bharatanatyam-arangetram-website/ class=post-card-link><div class=post-card-body><div class=post-card-title>Building Nritya Samarpanam - A Bharatanatyam Arangetram Website</div><div class=post-card-meta><time datetime=2026-04-05>05 Apr, 2026</time>
 <span class=post-card-tag>#software</span>
 <span class=post-card-tag>#web-development</span>
 <span class=post-card-tag>#projects</span>
-<span class=post-card-tag>#design</span></div><div class=post-card-desc>How I built a static website for my wife's Bharatanatyam Arangetram - from a blank folder to a live site with galleries, a guest book, countdown timer, and background music. A behind-the-scenes look at the craft and decisions that went into nrityasamarpanam.art.</div></div></a></li></ul></div><aside class=tag-sidebar><h3 class=sidebar-heading>Topics</h3><ul class=sidebar-tags><li><a href=https://asynkrunner.com/tags/running/ class=sidebar-tag>#Running
+<span class=post-card-tag>#design</span></div><div class=post-card-desc>How I built a static website for my wife's Bharatanatyam Arangetram - from a blank folder to a live site with galleries, a guest book, countdown timer, and background music. A behind-the-scenes look at the craft and decisions that went into nrityasamarpanam.art.</div><div class=post-card-engagement aria-hidden=true></div></div></a></li></ul></div><aside class=tag-sidebar><h3 class=sidebar-heading>Topics</h3><ul class=sidebar-tags><li><a href=https://asynkrunner.com/tags/running/ class=sidebar-tag>#Running
 <span class=sidebar-tag-count>5</span></a></li><li><a href=https://asynkrunner.com/tags/50-states/ class=sidebar-tag>#50-States
 <span class=sidebar-tag-count>3</span></a></li><li><a href=https://asynkrunner.com/tags/half-marathon/ class=sidebar-tag>#Half-Marathon
 <span class=sidebar-tag-count>3</span></a></li><li><a href=https://asynkrunner.com/tags/beginners/ class=sidebar-tag>#Beginners

@@ -687,6 +687,12 @@ ul.pinned-cards .post-card-link:hover {
   overflow:    hidden;
 }
 
+.post-card-engagement {
+  font-size:  0.75rem;
+  color:      var(--meta-color);
+  margin-top: 0.35rem;
+}
+
 /* ── Footer ───────────────────────────────────────────────────────────── */
 footer {
   font-family: var(--font-second);
