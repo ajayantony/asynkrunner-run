@@ -694,6 +694,14 @@ ul.pinned-cards .post-card-link:hover {
 }
 
 /* ── Footer ───────────────────────────────────────────────────────────── */
+.footer-personal {
+  margin-bottom: 0.85rem;
+  line-height:   1.6;
+  color:         var(--text-color);
+  opacity:       0.8;
+}
+
+
 footer {
   font-family: var(--font-second);
   font-size:   0.82rem;
