@@ -1,11 +1,12 @@
-const halfStates     = new Set(["NY","MA","DE","AZ","NC","CO","CT","FL","UT","TX","OK","PA","RI"]);
-const marathonStates = new Set(["NY"]);
+const halfStates     = new Set(["NY","MA","DE","AZ","NC","CO","CT","FL","UT","TX","OK","PA","RI","CA"]);
+const marathonStates = new Set(["NY","VT"]);
 
 const stateRaces = {
   NY: {
     half:     ["Rochester Half","United Airlines NYC Half","Flower City Half","Buffalo Half","Gorges Ithaca Half","Shoreline Half ★ PR","Syracuse Half"],
     marathon: ["Wineglass Marathon"],
   },
+  VT: { marathon: ["Vermont City Marathon"] },
   MA: { half: ["Cambridge Half Marathon"] },
   DE: { half: ["Rehoboth Beach Half"] },
   AZ: { half: ["Saguaro Half Marathon"] },
@@ -18,6 +19,7 @@ const stateRaces = {
   OK: { half: ["Williams Route 66 Half"] },
   PA: { half: ["BIH Half Marathon (Bird in Hand)"] },
   RI: { half: ["Amica Newport Half Marathon"] },
+  CA: { half: ["Napa to Sonoma Half Marathon"] },
 };
 
 const COLORS = {
@@ -101,7 +103,23 @@ d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3.0.1/states-10m.json")
       return !halfStates.has(a) && !marathonStates.has(a);
     }))
     .join("path").attr("d", path)
-    .attr("fill", COLORS.none).attr("stroke","#1a2840").attr("stroke-width", 0.6);
+    .attr("fill", COLORS.none).attr("stroke","#1a2840").attr("stroke-width", 0.6)
+    .on("mouseover", function(event, d) {
+      const abbr = fipsToAbbr[String(d.id).padStart(2,"0")];
+      tooltip.html("");
+      tooltip.append("div").attr("class","tt-state").text(abbr);
+      tooltip.style("opacity",1)
+        .style("left",(event.clientX+14)+"px")
+        .style("top",(event.clientY-44)+"px");
+      d3.select(this).attr("stroke-width", 2).attr("stroke","#4a5a70");
+    })
+    .on("mousemove", function(event) {
+      tooltip.style("left",(event.clientX+14)+"px").style("top",(event.clientY-44)+"px");
+    })
+    .on("mouseout", function() {
+      tooltip.style("opacity",0);
+      d3.select(this).attr("stroke-width",0.6).attr("stroke","#1a2840");
+    });
 
   // Highlighted states
   svg.append("g").selectAll("path")
