@@ -1,4 +1,4 @@
-const halfStates     = new Set(["NY","MA","DE","AZ","NC","CO","CT","FL","UT","TX","OK","PA","RI","CA"]);
+const halfStates     = new Set(["NY","MA","DE","AZ","NC","CO","CT","FL","UT","TX","OK","PA","RI","CA","TN"]);
 const marathonStates = new Set(["NY","VT"]);
 
 const stateRaces = {
@@ -20,6 +20,7 @@ const stateRaces = {
   PA: { half: ["BIH Half Marathon (Bird in Hand)"] },
   RI: { half: ["Amica Newport Half Marathon"] },
   CA: { half: ["Napa to Sonoma Half Marathon"] },
+  TN: { half: ["Great Smoky Mountains Half Marathon"] },
 };
 
 const COLORS = {

@@ -116,6 +116,32 @@ const peaks = [
     companion:  "Family",
     alltrails:  "https://www.alltrails.com/trail/us/california/sentinel-dome-trail",
   },
+  {
+    name:       "Grotto Falls via Trillium Gap Trail",
+    type:       "hike",
+    location:   "Gatlinburg, TN",
+    lat:        35.680,
+    lng:        -83.462,
+    elevation:  null,
+    gain:       "564 ft",
+    difficulty: "Moderate",
+    date:       "Aug 27, 2026",
+    companion:  "Friends",
+    alltrails:  "https://www.alltrails.com/trail/us/tennessee/grotto-falls-trail",
+  },
+  {
+    name:       "Kuwohi Observation Tower Trail",
+    type:       "state-highpoint",
+    location:   "Great Smoky Mountains, TN",
+    lat:        35.563,
+    lng:        -83.499,
+    elevation:  "6,643 ft",
+    gain:       "318 ft",
+    difficulty: "Moderate",
+    date:       "Aug 29, 2026",
+    companion:  "Friends",
+    alltrails:  "https://www.alltrails.com/trail/us/north-carolina/clingmans-dome-observation-tower-trail",
+  },
 ];
 
 const COLORS = {
