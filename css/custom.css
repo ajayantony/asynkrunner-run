@@ -9,7 +9,7 @@
 
 /* ── Root overrides ───────────────────────────────────────────────────── */
 :root {
-  --width:        960px;
+  --width:        1120px;
   --font-main:    "Lora", Georgia, "Times New Roman", serif;
   --font-second:  "Inter", system-ui, -apple-system, sans-serif;
 
@@ -153,19 +153,19 @@ header .title {
 
 nav {
   display:    flex;
-  gap:        0.35rem;
+  gap:        0.25rem;
   flex-wrap:  wrap;
   justify-content: flex-end;
 }
 
 a.nav-tab {
   font-family:     var(--font-second);
-  font-size:       0.8rem;
+  font-size:       0.76rem;
   font-weight:     500;
-  letter-spacing:  0.03em;
+  letter-spacing:  0.02em;
   color:           var(--heading-color);
   text-decoration: none;
-  padding:         0.35em 0.9em;
+  padding:         0.35em 0.6em;
   border-radius:   99px;
   border:          1px solid var(--border-color);
   transition:      background 0.15s, color 0.15s, border-color 0.15s;
@@ -719,10 +719,10 @@ footer {
 }
 
 /* ── Responsive ───────────────────────────────────────────────────────── */
-@media (max-width: 720px) {
-  body        { font-size: 17px; }
-  article h1  { font-size: 1.6rem; }
-
+/* Header/nav stack earlier than the main content breakpoint below —
+   at widths between ~720-900px there's room for the content column
+   but not enough for brand + all nav tabs on one row. */
+@media (max-width: 900px) {
   header {
     flex-direction: column;
     align-items:    flex-start;
@@ -730,6 +730,11 @@ footer {
   }
 
   nav { justify-content: flex-start; }
+}
+
+@media (max-width: 720px) {
+  body        { font-size: 17px; }
+  article h1  { font-size: 1.6rem; }
 
   .post-card a.post-card-link {
     flex-direction: column;
