@@ -5,200 +5,392 @@
 <a href=/races/ class=nav-tab>Races</a>
 <a href=/peaks/ class=nav-tab>Peaks & Trails</a>
 <a href=/national-parks/ class="nav-tab nav-tab--active">National Parks</a>
-<a href=/blog/ class=nav-tab>Blog</a></nav></header><main><style>body{max-width:1120px}.parks-page{width:100%}.parks-stats{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0 1.25rem}.park-stat{flex:1 1 140px;display:flex;flex-direction:column;align-items:center;background:color-mix(in srgb,var(--link-color) 8%,var(--background-color));border:1px solid var(--border-color);border-radius:10px;padding:1rem .75rem .85rem;text-align:center}.park-stat-num{font-family:var(--font-second);font-size:1.5rem;font-weight:700;color:var(--link-color);line-height:1.15}.park-stat-label{font-family:var(--font-second);font-size:.72rem;color:var(--meta-color);margin-top:.35rem;text-transform:uppercase;letter-spacing:.06em}.parks-goal{font-family:var(--font-second);font-size:.88rem;color:var(--text-color);margin-bottom:1.25rem}.parks-legend{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:center;font-family:var(--font-second);font-size:.85rem;color:var(--text-color);margin-bottom:1.5rem}.parks-legend .legend-item{display:flex;align-items:center;gap:.4rem}.parks-legend .legend-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0}.parks-legend .legend-dot.visited{background:var(--visited-color)}.parks-legend .legend-dot.unvisited{background:var(--meta-color);opacity:.45}.parks-legend .legend-item--muted{font-size:.78rem;color:var(--meta-color);font-style:italic}.parks-layout{display:flex;gap:2.5rem;align-items:flex-start}.parks-main-col{flex:1;min-width:0}.parks-timeline-col{width:240px;flex-shrink:0}.parks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:.9rem;margin-bottom:2rem}.park-badge{display:flex;flex-direction:column;align-items:center;text-align:center;padding:.9rem .5rem;border-radius:12px;border:3px solid var(--park-color,var(--border-color));background:color-mix(in srgb,var(--park-color,var(--border-color)) 9%,var(--background-color));text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}.park-badge:hover{transform:translateY(-2px)}.park-content{display:flex;flex-direction:column;align-items:center;gap:.35rem;transition:opacity .15s ease,filter .15s ease}.park-badge--visited{background:var(--park-color);box-shadow:0 2px 10px color-mix(in srgb,var(--park-color) 40%,transparent)}.park-badge--visited .park-icon-svg{color:color-mix(in srgb,var(--park-color) 35%,black)}.park-badge--visited .park-name{color:#1a1a1a;font-weight:700}.park-badge--visited .park-state{color:color-mix(in srgb,var(--park-color) 25%,black)}.park-badge--unvisited .park-icon-svg{color:var(--meta-color)}.park-badge--unvisited .park-content{opacity:.5;filter:grayscale(.6)}.park-badge--unvisited:hover .park-content{opacity:.85}.park-icon{width:38px;height:38px;display:flex;align-items:center;justify-content:center}.park-icon-svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.park-name{font-family:var(--font-second);font-size:.74rem;font-weight:600;color:var(--text-color);line-height:1.25}.park-state{font-family:var(--font-second);font-size:.64rem;color:var(--meta-color);text-transform:uppercase;letter-spacing:.05em}.parks-timeline-col h2{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--meta-color);margin:0 0 1rem;border-left:none;font-family:var(--font-second)}.tl-full{position:relative;padding-left:1.5rem}.tl-full::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--link-color) 0%,var(--border-color) 100%)}.tl-year{position:relative;display:inline-flex;align-items:center;font-family:var(--font-second);font-size:.68rem;font-weight:700;color:#fff;background:var(--link-color);padding:.2em .75em;border-radius:99px;margin:1.1rem 0 .55rem -1.5rem;letter-spacing:.09em;z-index:1}.tl-row{position:relative;padding:0 0 .9rem}.tl-row::before{content:'';position:absolute;left:-1.5rem;top:.25rem;width:10px;height:10px;border-radius:50%;background:var(--visited-color);border:2px solid var(--background-color);z-index:1}.tl-date{display:block;font-family:var(--font-second);font-size:.68rem;color:var(--meta-color);margin-bottom:.1rem}.tl-name{display:block;font-family:var(--font-second);font-size:.8rem;font-weight:600;color:var(--heading-color);line-height:1.3}.tl-loc{display:block;font-family:var(--font-second);font-size:.7rem;color:var(--meta-color)}.tl-today-row{position:relative;padding-top:.4rem;font-family:var(--font-second);font-size:.72rem;font-weight:700;color:var(--link-color)}.tl-today-row::before{content:'';position:absolute;left:-1.5rem;top:50%;transform:translateY(-50%);width:12px;height:12px;border-radius:50%;background:var(--link-color);border:2px solid var(--background-color);box-shadow:0 0 0 3px color-mix(in srgb,var(--link-color) 30%,transparent);z-index:1}.parks-empty-tl{font-family:var(--font-second);font-size:.78rem;color:var(--meta-color);font-style:italic}@media(max-width:720px){body{max-width:100%!important}.parks-layout{flex-direction:column}.parks-timeline-col{width:100%}.park-stat{flex:1 1 100px;padding:.7rem .4rem}.park-stat-num{font-size:1.15rem}.parks-grid{grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:.6rem}.park-name{font-size:.68rem}}</style><div class=parks-page><h1>National Parks</h1><div class=parks-stats><div class=park-stat><span class=park-stat-num>6/63</span>
+<a href=/blog/ class=nav-tab>Blog</a></nav></header><main><style>body{max-width:1120px}.parks-page{width:100%}.parks-stats{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0 1.25rem}.park-stat{flex:1 1 140px;display:flex;flex-direction:column;align-items:center;background:color-mix(in srgb,var(--link-color) 8%,var(--background-color));border:1px solid var(--border-color);border-radius:10px;padding:1rem .75rem .85rem;text-align:center}.park-stat-num{font-family:var(--font-second);font-size:1.5rem;font-weight:700;color:var(--link-color);line-height:1.15}.park-stat-label{font-family:var(--font-second);font-size:.72rem;color:var(--meta-color);margin-top:.35rem;text-transform:uppercase;letter-spacing:.06em}.parks-goal{font-family:var(--font-second);font-size:.88rem;color:var(--text-color);margin-bottom:1.25rem}.parks-legend{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:center;font-family:var(--font-second);font-size:.85rem;color:var(--text-color);margin-bottom:1.5rem}.parks-legend .legend-item{display:flex;align-items:center;gap:.4rem}.parks-legend .legend-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0}.parks-legend .legend-dot.visited{background:var(--visited-color)}.parks-legend .legend-dot.unvisited{background:var(--meta-color);opacity:.45}.parks-legend .legend-item--muted{font-size:.78rem;color:var(--meta-color);font-style:italic}.parks-layout{display:flex;gap:2.5rem;align-items:flex-start}.parks-main-col{flex:1;min-width:0}.parks-timeline-col{width:240px;flex-shrink:0}.parks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:.9rem;margin-bottom:2rem}.park-badge{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:.9rem .5rem;border-radius:12px;border:3px solid var(--park-color,var(--border-color));background:color-mix(in srgb,var(--park-color,var(--border-color)) 9%,var(--background-color));text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}.park-badge:hover{transform:translateY(-2px);z-index:10;text-decoration:none}.park-content{display:flex;flex-direction:column;align-items:center;gap:.35rem;transition:opacity .15s ease,filter .15s ease}.park-badge--visited{background:var(--park-color);box-shadow:0 2px 10px color-mix(in srgb,var(--park-color) 40%,transparent)}.park-badge--visited .park-icon-svg{color:color-mix(in srgb,var(--park-color) 35%,black)}.park-badge--visited .park-name{color:#1a1a1a;font-weight:700}.park-badge--visited .park-state{color:color-mix(in srgb,var(--park-color) 25%,black)}.park-badge--unvisited .park-icon-svg{color:var(--meta-color)}.park-badge--unvisited .park-content{opacity:.5;filter:grayscale(.6)}.park-badge--unvisited:hover .park-content{opacity:.85}.park-icon{width:38px;height:38px;display:flex;align-items:center;justify-content:center}.park-icon-svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.park-name{font-family:var(--font-second);font-size:.74rem;font-weight:600;color:var(--text-color);line-height:1.25}.park-state{font-family:var(--font-second);font-size:.64rem;color:var(--meta-color);text-transform:uppercase;letter-spacing:.05em}.park-tooltip{display:flex;flex-direction:column;position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%)translateY(4px);background:#1a2333;border:1px solid rgba(255,255,255,.12);color:#e8edf2;font-family:var(--font-second);font-size:.78rem;padding:.65rem .8rem;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.45);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .15s,transform .15s;min-width:175px;max-width:230px;line-height:1.5;text-align:left;white-space:normal;z-index:20}.park-badge:hover .park-tooltip,.park-badge:focus-visible .park-tooltip{opacity:1;visibility:visible;transform:translateX(-50%)translateY(0)}.tt-park-name{font-size:.92rem;font-weight:700;color:#fff;letter-spacing:.02em}.tt-park-meta{font-size:.68rem;color:#9fb0c3;margin:.15rem 0 .5rem;text-transform:uppercase;letter-spacing:.05em}.tt-hike{font-size:.76rem;color:#c8d4e0;padding:.1rem 0 .1rem .5rem;border-left:2px solid rgba(255,255,255,.15);margin:.3rem 0}.tt-hike-date{display:block;color:#8695a8;font-size:.66rem;margin-top:.05rem}.tt-empty{font-size:.74rem;color:#8695a8;font-style:italic}.parks-timeline-col h2{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--meta-color);margin:0 0 1rem;border-left:none;font-family:var(--font-second)}.tl-full{position:relative;padding-left:1.5rem}.tl-full::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--link-color) 0%,var(--border-color) 100%)}.tl-year{position:relative;display:inline-flex;align-items:center;font-family:var(--font-second);font-size:.68rem;font-weight:700;color:#fff;background:var(--link-color);padding:.2em .75em;border-radius:99px;margin:1.1rem 0 .55rem -1.5rem;letter-spacing:.09em;z-index:1}.tl-row{position:relative;padding:0 0 .9rem}.tl-row::before{content:'';position:absolute;left:-1.5rem;top:.25rem;width:10px;height:10px;border-radius:50%;background:var(--visited-color);border:2px solid var(--background-color);z-index:1}.tl-date{display:block;font-family:var(--font-second);font-size:.68rem;color:var(--meta-color);margin-bottom:.1rem}.tl-name{display:block;font-family:var(--font-second);font-size:.8rem;font-weight:600;color:var(--heading-color);line-height:1.3}.tl-loc{display:block;font-family:var(--font-second);font-size:.7rem;color:var(--meta-color)}.tl-today-row{position:relative;padding-top:.4rem;font-family:var(--font-second);font-size:.72rem;font-weight:700;color:var(--link-color)}.tl-today-row::before{content:'';position:absolute;left:-1.5rem;top:50%;transform:translateY(-50%);width:12px;height:12px;border-radius:50%;background:var(--link-color);border:2px solid var(--background-color);box-shadow:0 0 0 3px color-mix(in srgb,var(--link-color) 30%,transparent);z-index:1}.parks-empty-tl{font-family:var(--font-second);font-size:.78rem;color:var(--meta-color);font-style:italic}@media(max-width:720px){body{max-width:100%!important}.parks-layout{flex-direction:column}.parks-timeline-col{width:100%}.park-stat{flex:1 1 100px;padding:.7rem .4rem}.park-stat-num{font-size:1.15rem}.parks-grid{grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:.6rem}.park-name{font-size:.68rem}}</style><div class=parks-page><h1>National Parks</h1><div class=parks-stats><div class=park-stat><span class=park-stat-num>6/63</span>
 <span class=park-stat-label>Parks Visited</span></div><div class=park-stat><span class=park-stat-num>5/32</span>
 <span class=park-stat-label>States & Territories</span></div><div class=park-stat><span class=park-stat-num>Great Smoky Mountains</span>
 <span class=park-stat-label>Most Recent</span></div></div><p class=parks-goal>Goal: Visit all 63 US National Parks &mdash; <strong>6 / 63</strong> complete</p><div class=parks-layout><div class=parks-main-col><h2>All 63 National Parks</h2><div class=parks-legend><span class=legend-item><span class="legend-dot visited"></span> Visited</span>
 <span class=legend-item><span class="legend-dot unvisited"></span> Not yet</span>
-<span class="legend-item legend-item--muted">Border color = state / territory</span></div><div class=parks-grid><a class="park-badge park-badge--unvisited" style=--park-color:#90df95 href=https://www.nps.gov/acad/index.htm target=_blank rel=noopener title="Acadia, ME"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 18q10-6 20 0"/><ellipse cx="12" cy="18" rx="4" ry="1.4" fill="currentcolor" stroke="none"/><line x1="12" y1="18" x2="12" y2="9"/><path d="M12 10q-3-1-4 1"/><path d="M12 10q3-1 4 1"/></svg></span>
+<span class="legend-item legend-item--muted">Border color = state / territory</span></div><div class=parks-grid><a class="park-badge park-badge--unvisited" style=--park-color:#90df95 href=https://www.nps.gov/acad/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 18q10-6 20 0"/><ellipse cx="12" cy="18" rx="4" ry="1.4" fill="currentcolor" stroke="none"/><line x1="12" y1="18" x2="12" y2="9"/><path d="M12 10q-3-1-4 1"/><path d="M12 10q3-1 4 1"/></svg></span>
 <span class=park-name>Acadia</span>
 <span class=park-state>ME</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfae90 href=https://www.nps.gov/npsa/index.htm target=_blank rel=noopener title="American Samoa, AS"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q3-3 6 0t6 0 6 0 2-1"/><path d="M6 20q0-4 2-4t2 4"/><path d="M14 20q0-3 1.5-3t1.5 3"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Acadia</span>
+<span class=tt-park-meta>ME</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfae90 href=https://www.nps.gov/npsa/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q3-3 6 0t6 0 6 0 2-1"/><path d="M6 20q0-4 2-4t2 4"/><path d="M14 20q0-3 1.5-3t1.5 3"/></svg></span>
 <span class=park-name>American Samoa</span>
 <span class=park-state>AS</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d590df href=https://www.nps.gov/arch/index.htm target=_blank rel=noopener title="Arches, UT"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 20V13a8 8 0 0116 0v7"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>American Samoa</span>
+<span class=tt-park-meta>AS</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d590df href=https://www.nps.gov/arch/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 20V13a8 8 0 0116 0v7"/></svg></span>
 <span class=park-name>Arches</span>
 <span class=park-state>UT</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#a990df href=https://www.nps.gov/badl/index.htm target=_blank rel=noopener title="Badlands, SD"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 5,11 8,16 11,9 14,15 17,8 20,14 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Arches</span>
+<span class=tt-park-meta>UT</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#a990df href=https://www.nps.gov/badl/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 5,11 8,16 11,9 14,15 17,8 20,14 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
 <span class=park-name>Badlands</span>
 <span class=park-state>SD</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#c690df href=https://www.nps.gov/bibe/index.htm target=_blank rel=noopener title="Big Bend, TX"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><circle cx="17" cy="6" r="2.4" fill="currentcolor" stroke="none"/><path d="M2 18q4-4 8 0t8 0 4-2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Badlands</span>
+<span class=tt-park-meta>SD</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#c690df href=https://www.nps.gov/bibe/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><circle cx="17" cy="6" r="2.4" fill="currentcolor" stroke="none"/><path d="M2 18q4-4 8 0t8 0 4-2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
 <span class=park-name>Big Bend</span>
 <span class=park-state>TX</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d5df90 href=https://www.nps.gov/bisc/index.htm target=_blank rel=noopener title="Biscayne, FL"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q3-3 6 0t6 0 6 0 2-1"/><path d="M6 20q0-4 2-4t2 4"/><path d="M14 20q0-3 1.5-3t1.5 3"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Big Bend</span>
+<span class=tt-park-meta>TX</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d5df90 href=https://www.nps.gov/bisc/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q3-3 6 0t6 0 6 0 2-1"/><path d="M6 20q0-4 2-4t2 4"/><path d="M14 20q0-3 1.5-3t1.5 3"/></svg></span>
 <span class=park-name>Biscayne</span>
 <span class=park-state>FL</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfda90 href=https://www.nps.gov/blca/index.htm target=_blank rel=noopener title="Black Canyon of the Gunnison, CO"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Biscayne</span>
+<span class=tt-park-meta>FL</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfda90 href=https://www.nps.gov/blca/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
 <span class=park-name>Black Canyon of the Gunnison</span>
 <span class=park-state>CO</span>
-</span></a><a class="park-badge park-badge--visited" style=--park-color:#d590df href=https://www.nps.gov/brca/index.htm target=_blank rel=noopener title="Bryce Canyon, UT — visited Apr 13, 2025"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><line x1="2" y1="20" x2="22" y2="20"/><path d="M6 20V11a1.5 1.5.0 013 0v9"/><path d="M12 20V8a1.5 1.5.0 013 0V20"/><path d="M18 20V13a1.2 1.2.0 012.4.0v7"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Black Canyon of the Gunnison</span>
+<span class=tt-park-meta>CO</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--visited" style=--park-color:#d590df href=https://www.nps.gov/brca/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><line x1="2" y1="20" x2="22" y2="20"/><path d="M6 20V11a1.5 1.5.0 013 0v9"/><path d="M12 20V8a1.5 1.5.0 013 0V20"/><path d="M18 20V13a1.2 1.2.0 012.4.0v7"/></svg></span>
 <span class=park-name>Bryce Canyon</span>
 <span class=park-state>UT</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d590df href=https://www.nps.gov/cany/index.htm target=_blank rel=noopener title="Canyonlands, UT"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Bryce Canyon</span>
+<span class=tt-park-meta>UT &#183; Visited Apr 13, 2025</span>
+<span class=tt-hike>Queens Garden & Navajo Loop<span class=tt-hike-date>Apr 13, 2025</span></span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d590df href=https://www.nps.gov/cany/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
 <span class=park-name>Canyonlands</span>
 <span class=park-state>UT</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d590df href=https://www.nps.gov/care/index.htm target=_blank rel=noopener title="Capitol Reef, UT"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Canyonlands</span>
+<span class=tt-park-meta>UT</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d590df href=https://www.nps.gov/care/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
 <span class=park-name>Capitol Reef</span>
 <span class=park-state>UT</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90c1df href=https://www.nps.gov/cave/index.htm target=_blank rel=noopener title="Carlsbad Caverns, NM"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 20 8 6l6 10 4-6 4 10"/><path d="M9 20a3 3 0 016 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Capitol Reef</span>
+<span class=tt-park-meta>UT</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90c1df href=https://www.nps.gov/cave/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 20 8 6l6 10 4-6 4 10"/><path d="M9 20a3 3 0 016 0"/></svg></span>
 <span class=park-name>Carlsbad Caverns</span>
 <span class=park-state>NM</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/chis/index.htm target=_blank rel=noopener title="Channel Islands, CA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 18q10-6 20 0"/><ellipse cx="12" cy="18" rx="4" ry="1.4" fill="currentcolor" stroke="none"/><line x1="12" y1="18" x2="12" y2="9"/><path d="M12 10q-3-1-4 1"/><path d="M12 10q3-1 4 1"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Carlsbad Caverns</span>
+<span class=tt-park-meta>NM</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/chis/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 18q10-6 20 0"/><ellipse cx="12" cy="18" rx="4" ry="1.4" fill="currentcolor" stroke="none"/><line x1="12" y1="18" x2="12" y2="9"/><path d="M12 10q-3-1-4 1"/><path d="M12 10q3-1 4 1"/></svg></span>
 <span class=park-name>Channel Islands</span>
 <span class=park-state>CA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#9a90df href=https://www.nps.gov/cong/index.htm target=_blank rel=noopener title="Congaree, SC"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 16q3-2 6 0t6 0 6 0 4 0"/><path d="M2 20q3-2 6 0t6 0 6 0 4 0"/><line x1="7" y1="16" x2="7" y2="9"/><line x1="7" y1="9" x2="5.5" y2="11"/><line x1="15" y1="16" x2="15" y2="10"/><line x1="15" y1="10" x2="16.5" y2="12"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Channel Islands</span>
+<span class=tt-park-meta>CA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#9a90df href=https://www.nps.gov/cong/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 16q3-2 6 0t6 0 6 0 4 0"/><path d="M2 20q3-2 6 0t6 0 6 0 4 0"/><line x1="7" y1="16" x2="7" y2="9"/><line x1="7" y1="9" x2="5.5" y2="11"/><line x1="15" y1="16" x2="15" y2="10"/><line x1="15" y1="10" x2="16.5" y2="12"/></svg></span>
 <span class=park-name>Congaree</span>
 <span class=park-state>SC</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#9095df href=https://www.nps.gov/crla/index.htm target=_blank rel=noopener title="Crater Lake, OR"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="4,13 9,6 12,10 15,5 20,13"/><path d="M2 17q3-1.5 5 0t5 0 5 0 5 0"/><path d="M2 20q3-1.5 5 0t5 0 5 0 5 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Congaree</span>
+<span class=tt-park-meta>SC</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#9095df href=https://www.nps.gov/crla/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="4,13 9,6 12,10 15,5 20,13"/><path d="M2 17q3-1.5 5 0t5 0 5 0 5 0"/><path d="M2 20q3-1.5 5 0t5 0 5 0 5 0"/></svg></span>
 <span class=park-name>Crater Lake</span>
 <span class=park-state>OR</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90a4df href=https://www.nps.gov/cuva/index.htm target=_blank rel=noopener title="Cuyahoga Valley, OH"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M6 18l3-8 3 8z"/><path d="M6 14 9 7l3 7z"/><line x1="9" y1="18" x2="9" y2="21"/><path d="M14 19l3-7 3 7z"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Crater Lake</span>
+<span class=tt-park-meta>OR</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90a4df href=https://www.nps.gov/cuva/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M6 18l3-8 3 8z"/><path d="M6 14 9 7l3 7z"/><line x1="9" y1="18" x2="9" y2="21"/><path d="M14 19l3-7 3 7z"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
 <span class=park-name>Cuyahoga Valley</span>
 <span class=park-state>OH</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/deva/index.htm target=_blank rel=noopener title="Death Valley, CA/NV"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><circle cx="17" cy="6" r="2.4" fill="currentcolor" stroke="none"/><path d="M2 18q4-4 8 0t8 0 4-2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Cuyahoga Valley</span>
+<span class=tt-park-meta>OH</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/deva/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><circle cx="17" cy="6" r="2.4" fill="currentcolor" stroke="none"/><path d="M2 18q4-4 8 0t8 0 4-2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
 <span class=park-name>Death Valley</span>
 <span class=park-state>CA/NV</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/dena/index.htm target=_blank rel=noopener title="Denali, AK"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Death Valley</span>
+<span class=tt-park-meta>CA/NV</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/dena/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
 <span class=park-name>Denali</span>
 <span class=park-state>AK</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d5df90 href=https://www.nps.gov/drto/index.htm target=_blank rel=noopener title="Dry Tortugas, FL"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q3-3 6 0t6 0 6 0 2-1"/><path d="M6 20q0-4 2-4t2 4"/><path d="M14 20q0-3 1.5-3t1.5 3"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Denali</span>
+<span class=tt-park-meta>AK</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d5df90 href=https://www.nps.gov/drto/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q3-3 6 0t6 0 6 0 2-1"/><path d="M6 20q0-4 2-4t2 4"/><path d="M14 20q0-3 1.5-3t1.5 3"/></svg></span>
 <span class=park-name>Dry Tortugas</span>
 <span class=park-state>FL</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d5df90 href=https://www.nps.gov/ever/index.htm target=_blank rel=noopener title="Everglades, FL"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 16q3-2 6 0t6 0 6 0 4 0"/><path d="M2 20q3-2 6 0t6 0 6 0 4 0"/><line x1="7" y1="16" x2="7" y2="9"/><line x1="7" y1="9" x2="5.5" y2="11"/><line x1="15" y1="16" x2="15" y2="10"/><line x1="15" y1="10" x2="16.5" y2="12"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Dry Tortugas</span>
+<span class=tt-park-meta>FL</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#d5df90 href=https://www.nps.gov/ever/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 16q3-2 6 0t6 0 6 0 4 0"/><path d="M2 20q3-2 6 0t6 0 6 0 4 0"/><line x1="7" y1="16" x2="7" y2="9"/><line x1="7" y1="9" x2="5.5" y2="11"/><line x1="15" y1="16" x2="15" y2="10"/><line x1="15" y1="10" x2="16.5" y2="12"/></svg></span>
 <span class=park-name>Everglades</span>
 <span class=park-state>FL</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/gaar/index.htm target=_blank rel=noopener title="Gates of the Arctic, AK"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><line x1="2" y1="18" x2="22" y2="18"/><polyline points="14,18 17,12 20,18"/><path d="M5 18q1-2 2 0"/><path d="M9 18q1-1.5 2 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Everglades</span>
+<span class=tt-park-meta>FL</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/gaar/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><line x1="2" y1="18" x2="22" y2="18"/><polyline points="14,18 17,12 20,18"/><path d="M5 18q1-2 2 0"/><path d="M9 18q1-1.5 2 0"/></svg></span>
 <span class=park-name>Gates of the Arctic</span>
 <span class=park-state>AK</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90dfc1 href=https://www.nps.gov/jeff/index.htm target=_blank rel=noopener title="Gateway Arch, MO"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 20V13a8 8 0 0116 0v7"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Gates of the Arctic</span>
+<span class=tt-park-meta>AK</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90dfc1 href=https://www.nps.gov/jeff/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 20V13a8 8 0 0116 0v7"/></svg></span>
 <span class=park-name>Gateway Arch</span>
 <span class=park-state>MO</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90dfd0 href=https://www.nps.gov/glac/index.htm target=_blank rel=noopener title="Glacier, MT"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,18 7,7 10,12 13,6 18,14 22,18"/><line x1="8" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="16" y2="12"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Gateway Arch</span>
+<span class=tt-park-meta>MO</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90dfd0 href=https://www.nps.gov/glac/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,18 7,7 10,12 13,6 18,14 22,18"/><line x1="8" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="16" y2="12"/></svg></span>
 <span class=park-name>Glacier</span>
 <span class=park-state>MT</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/glba/index.htm target=_blank rel=noopener title="Glacier Bay, AK"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,18 7,7 10,12 13,6 18,14 22,18"/><line x1="8" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="16" y2="12"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Glacier</span>
+<span class=tt-park-meta>MT</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/glba/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,18 7,7 10,12 13,6 18,14 22,18"/><line x1="8" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="16" y2="12"/></svg></span>
 <span class=park-name>Glacier Bay</span>
 <span class=park-state>AK</span>
-</span></a><a class="park-badge park-badge--visited" style=--park-color:#dfbd90 href=https://www.nps.gov/grca/index.htm target=_blank rel=noopener title="Grand Canyon, AZ — visited Feb 23, 2024"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Glacier Bay</span>
+<span class=tt-park-meta>AK</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--visited" style=--park-color:#dfbd90 href=https://www.nps.gov/grca/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
 <span class=park-name>Grand Canyon</span>
 <span class=park-state>AZ</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df909f href=https://www.nps.gov/grte/index.htm target=_blank rel=noopener title="Grand Teton, WY"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Grand Canyon</span>
+<span class=tt-park-meta>AZ &#183; Visited Feb 23, 2024</span>
+<span class=tt-empty>No trails logged yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df909f href=https://www.nps.gov/grte/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
 <span class=park-name>Grand Teton</span>
 <span class=park-state>WY</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90b3df href=https://www.nps.gov/grba/index.htm target=_blank rel=noopener title="Great Basin, NV"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Grand Teton</span>
+<span class=tt-park-meta>WY</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90b3df href=https://www.nps.gov/grba/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
 <span class=park-name>Great Basin</span>
 <span class=park-state>NV</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfda90 href=https://www.nps.gov/grsa/index.htm target=_blank rel=noopener title="Great Sand Dunes, CO"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q4-4 8 0t8 0 4-2"/><path d="M2 15q4-4 8 0t8 0 4-2"/><path d="M2 20q4-4 8 0t8 0 4-2"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Great Basin</span>
+<span class=tt-park-meta>NV</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfda90 href=https://www.nps.gov/grsa/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q4-4 8 0t8 0 4-2"/><path d="M2 15q4-4 8 0t8 0 4-2"/><path d="M2 20q4-4 8 0t8 0 4-2"/></svg></span>
 <span class=park-name>Great Sand Dunes</span>
 <span class=park-state>CO</span>
-</span></a><a class="park-badge park-badge--visited" style=--park-color:#b890df href=https://www.nps.gov/grsm/index.htm target=_blank rel=noopener title="Great Smoky Mountains, TN/NC — visited Aug 27, 2026"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Great Sand Dunes</span>
+<span class=tt-park-meta>CO</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--visited" style=--park-color:#b890df href=https://www.nps.gov/grsm/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
 <span class=park-name>Great Smoky Mountains</span>
 <span class=park-state>TN/NC</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#c690df href=https://www.nps.gov/gumo/index.htm target=_blank rel=noopener title="Guadalupe Mountains, TX"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Great Smoky Mountains</span>
+<span class=tt-park-meta>TN/NC &#183; Visited Aug 27, 2026</span>
+<span class=tt-hike>Grotto Falls via Trillium Gap Trail<span class=tt-hike-date>Aug 27, 2026</span></span>
+<span class=tt-hike>Kuwohi Observation Tower Trail<span class=tt-hike-date>Aug 29, 2026</span></span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#c690df href=https://www.nps.gov/gumo/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
 <span class=park-name>Guadalupe Mountains</span>
 <span class=park-state>TX</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#c6df90 href=https://www.nps.gov/hale/index.htm target=_blank rel=noopener title="Haleakalā, HI"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 19 10 7l2 3 2-3 6 12z"/><path d="M9 4q1-2 2 0t2 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Guadalupe Mountains</span>
+<span class=tt-park-meta>TX</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#c6df90 href=https://www.nps.gov/hale/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 19 10 7l2 3 2-3 6 12z"/><path d="M9 4q1-2 2 0t2 0"/></svg></span>
 <span class=park-name>Haleakalā</span>
 <span class=park-state>HI</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#c6df90 href=https://www.nps.gov/havo/index.htm target=_blank rel=noopener title="Hawaiʻi Volcanoes, HI"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 19 10 7l2 3 2-3 6 12z"/><path d="M9 4q1-2 2 0t2 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Haleakalā</span>
+<span class=tt-park-meta>HI</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#c6df90 href=https://www.nps.gov/havo/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 19 10 7l2 3 2-3 6 12z"/><path d="M9 4q1-2 2 0t2 0"/></svg></span>
 <span class=park-name>Hawaiʻi Volcanoes</span>
 <span class=park-state>HI</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9f90 href=https://www.nps.gov/hosp/index.htm target=_blank rel=noopener title="Hot Springs, AR"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 20q4-2 8 0t8 0"/><line x1="12" y1="16" x2="12" y2="4"/><line x1="12" y1="9" x2="9" y2="6"/><line x1="12" y1="9" x2="15" y2="6"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Hawaiʻi Volcanoes</span>
+<span class=tt-park-meta>HI</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9f90 href=https://www.nps.gov/hosp/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 20q4-2 8 0t8 0"/><line x1="12" y1="16" x2="12" y2="4"/><line x1="12" y1="9" x2="9" y2="6"/><line x1="12" y1="9" x2="15" y2="6"/></svg></span>
 <span class=park-name>Hot Springs</span>
 <span class=park-state>AR</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#a9df90 href=https://www.nps.gov/indu/index.htm target=_blank rel=noopener title="Indiana Dunes, IN"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q4-4 8 0t8 0 4-2"/><path d="M2 15q4-4 8 0t8 0 4-2"/><path d="M2 20q4-4 8 0t8 0 4-2"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Hot Springs</span>
+<span class=tt-park-meta>AR</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#a9df90 href=https://www.nps.gov/indu/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q4-4 8 0t8 0 4-2"/><path d="M2 15q4-4 8 0t8 0 4-2"/><path d="M2 20q4-4 8 0t8 0 4-2"/></svg></span>
 <span class=park-name>Indiana Dunes</span>
 <span class=park-state>IN</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90dfa4 href=https://www.nps.gov/isro/index.htm target=_blank rel=noopener title="Isle Royale, MI"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 18q10-6 20 0"/><ellipse cx="12" cy="18" rx="4" ry="1.4" fill="currentcolor" stroke="none"/><line x1="12" y1="18" x2="12" y2="9"/><path d="M12 10q-3-1-4 1"/><path d="M12 10q3-1 4 1"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Indiana Dunes</span>
+<span class=tt-park-meta>IN</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90dfa4 href=https://www.nps.gov/isro/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 18q10-6 20 0"/><ellipse cx="12" cy="18" rx="4" ry="1.4" fill="currentcolor" stroke="none"/><line x1="12" y1="18" x2="12" y2="9"/><path d="M12 10q-3-1-4 1"/><path d="M12 10q3-1 4 1"/></svg></span>
 <span class=park-name>Isle Royale</span>
 <span class=park-state>MI</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/jotr/index.htm target=_blank rel=noopener title="Joshua Tree, CA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><circle cx="17" cy="6" r="2.4" fill="currentcolor" stroke="none"/><path d="M2 18q4-4 8 0t8 0 4-2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Isle Royale</span>
+<span class=tt-park-meta>MI</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/jotr/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><circle cx="17" cy="6" r="2.4" fill="currentcolor" stroke="none"/><path d="M2 18q4-4 8 0t8 0 4-2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
 <span class=park-name>Joshua Tree</span>
 <span class=park-state>CA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/katm/index.htm target=_blank rel=noopener title="Katmai, AK"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 19 10 7l2 3 2-3 6 12z"/><path d="M9 4q1-2 2 0t2 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Joshua Tree</span>
+<span class=tt-park-meta>CA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/katm/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 19 10 7l2 3 2-3 6 12z"/><path d="M9 4q1-2 2 0t2 0"/></svg></span>
 <span class=park-name>Katmai</span>
 <span class=park-state>AK</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/kefj/index.htm target=_blank rel=noopener title="Kenai Fjords, AK"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,18 7,7 10,12 13,6 18,14 22,18"/><line x1="8" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="16" y2="12"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Katmai</span>
+<span class=tt-park-meta>AK</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/kefj/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,18 7,7 10,12 13,6 18,14 22,18"/><line x1="8" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="16" y2="12"/></svg></span>
 <span class=park-name>Kenai Fjords</span>
 <span class=park-state>AK</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/kica/index.htm target=_blank rel=noopener title="Kings Canyon, CA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Kenai Fjords</span>
+<span class=tt-park-meta>AK</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/kica/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
 <span class=park-name>Kings Canyon</span>
 <span class=park-state>CA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/kova/index.htm target=_blank rel=noopener title="Kobuk Valley, AK"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q4-4 8 0t8 0 4-2"/><path d="M2 15q4-4 8 0t8 0 4-2"/><path d="M2 20q4-4 8 0t8 0 4-2"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Kings Canyon</span>
+<span class=tt-park-meta>CA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/kova/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q4-4 8 0t8 0 4-2"/><path d="M2 15q4-4 8 0t8 0 4-2"/><path d="M2 20q4-4 8 0t8 0 4-2"/></svg></span>
 <span class=park-name>Kobuk Valley</span>
 <span class=park-state>AK</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/lacl/index.htm target=_blank rel=noopener title="Lake Clark, AK"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="4,13 9,6 12,10 15,5 20,13"/><path d="M2 17q3-1.5 5 0t5 0 5 0 5 0"/><path d="M2 20q3-1.5 5 0t5 0 5 0 5 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Kobuk Valley</span>
+<span class=tt-park-meta>AK</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/lacl/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="4,13 9,6 12,10 15,5 20,13"/><path d="M2 17q3-1.5 5 0t5 0 5 0 5 0"/><path d="M2 20q3-1.5 5 0t5 0 5 0 5 0"/></svg></span>
 <span class=park-name>Lake Clark</span>
 <span class=park-state>AK</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/lavo/index.htm target=_blank rel=noopener title="Lassen Volcanic, CA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 19 10 7l2 3 2-3 6 12z"/><path d="M9 4q1-2 2 0t2 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Lake Clark</span>
+<span class=tt-park-meta>AK</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/lavo/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 19 10 7l2 3 2-3 6 12z"/><path d="M9 4q1-2 2 0t2 0"/></svg></span>
 <span class=park-name>Lassen Volcanic</span>
 <span class=park-state>CA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#9adf90 href=https://www.nps.gov/maca/index.htm target=_blank rel=noopener title="Mammoth Cave, KY"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 20 8 6l6 10 4-6 4 10"/><path d="M9 20a3 3 0 016 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Lassen Volcanic</span>
+<span class=tt-park-meta>CA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#9adf90 href=https://www.nps.gov/maca/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 20 8 6l6 10 4-6 4 10"/><path d="M9 20a3 3 0 016 0"/></svg></span>
 <span class=park-name>Mammoth Cave</span>
 <span class=park-state>KY</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfda90 href=https://www.nps.gov/meve/index.htm target=_blank rel=noopener title="Mesa Verde, CO"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Mammoth Cave</span>
+<span class=tt-park-meta>KY</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfda90 href=https://www.nps.gov/meve/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
 <span class=park-name>Mesa Verde</span>
 <span class=park-state>CO</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90bd href=https://www.nps.gov/mora/index.htm target=_blank rel=noopener title="Mount Rainier, WA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Mesa Verde</span>
+<span class=tt-park-meta>CO</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90bd href=https://www.nps.gov/mora/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
 <span class=park-name>Mount Rainier</span>
 <span class=park-state>WA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90ae href=https://www.nps.gov/neri/index.htm target=_blank rel=noopener title="New River Gorge, WV"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Mount Rainier</span>
+<span class=tt-park-meta>WA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90ae href=https://www.nps.gov/neri/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
 <span class=park-name>New River Gorge</span>
 <span class=park-state>WV</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90bd href=https://www.nps.gov/noca/index.htm target=_blank rel=noopener title="North Cascades, WA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,18 7,7 10,12 13,6 18,14 22,18"/><line x1="8" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="16" y2="12"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>New River Gorge</span>
+<span class=tt-park-meta>WV</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90bd href=https://www.nps.gov/noca/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,18 7,7 10,12 13,6 18,14 22,18"/><line x1="8" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="16" y2="12"/></svg></span>
 <span class=park-name>North Cascades</span>
 <span class=park-state>WA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90bd href=https://www.nps.gov/olym/index.htm target=_blank rel=noopener title="Olympic, WA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M6 18l3-8 3 8z"/><path d="M6 14 9 7l3 7z"/><line x1="9" y1="18" x2="9" y2="21"/><path d="M14 19l3-7 3 7z"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>North Cascades</span>
+<span class=tt-park-meta>WA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90bd href=https://www.nps.gov/olym/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M6 18l3-8 3 8z"/><path d="M6 14 9 7l3 7z"/><line x1="9" y1="18" x2="9" y2="21"/><path d="M14 19l3-7 3 7z"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
 <span class=park-name>Olympic</span>
 <span class=park-state>WA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfbd90 href=https://www.nps.gov/pefo/index.htm target=_blank rel=noopener title="Petrified Forest, AZ"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><circle cx="17" cy="6" r="2.4" fill="currentcolor" stroke="none"/><path d="M2 18q4-4 8 0t8 0 4-2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Olympic</span>
+<span class=tt-park-meta>WA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfbd90 href=https://www.nps.gov/pefo/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><circle cx="17" cy="6" r="2.4" fill="currentcolor" stroke="none"/><path d="M2 18q4-4 8 0t8 0 4-2"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span>
 <span class=park-name>Petrified Forest</span>
 <span class=park-state>AZ</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/pinn/index.htm target=_blank rel=noopener title="Pinnacles, CA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><line x1="2" y1="20" x2="22" y2="20"/><path d="M6 20V11a1.5 1.5.0 013 0v9"/><path d="M12 20V8a1.5 1.5.0 013 0V20"/><path d="M18 20V13a1.2 1.2.0 012.4.0v7"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Petrified Forest</span>
+<span class=tt-park-meta>AZ</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/pinn/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><line x1="2" y1="20" x2="22" y2="20"/><path d="M6 20V11a1.5 1.5.0 013 0v9"/><path d="M12 20V8a1.5 1.5.0 013 0V20"/><path d="M18 20V13a1.2 1.2.0 012.4.0v7"/></svg></span>
 <span class=park-name>Pinnacles</span>
 <span class=park-state>CA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/redw/index.htm target=_blank rel=noopener title="Redwood, CA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M6 18l3-8 3 8z"/><path d="M6 14 9 7l3 7z"/><line x1="9" y1="18" x2="9" y2="21"/><path d="M14 19l3-7 3 7z"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Pinnacles</span>
+<span class=tt-park-meta>CA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/redw/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M6 18l3-8 3 8z"/><path d="M6 14 9 7l3 7z"/><line x1="9" y1="18" x2="9" y2="21"/><path d="M14 19l3-7 3 7z"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
 <span class=park-name>Redwood</span>
 <span class=park-state>CA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfda90 href=https://www.nps.gov/romo/index.htm target=_blank rel=noopener title="Rocky Mountain, CO"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Redwood</span>
+<span class=tt-park-meta>CA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfda90 href=https://www.nps.gov/romo/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
 <span class=park-name>Rocky Mountain</span>
 <span class=park-state>CO</span>
-</span></a><a class="park-badge park-badge--visited" style=--park-color:#dfbd90 href=https://www.nps.gov/sagu/index.htm target=_blank rel=noopener title="Saguaro, AZ — visited Feb 24, 2024"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><line x1="12" y1="21" x2="12" y2="5"/><path d="M12 14H8V9"/><path d="M12 10h4v6"/><line x1="4" y1="21" x2="20" y2="21"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Rocky Mountain</span>
+<span class=tt-park-meta>CO</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--visited" style=--park-color:#dfbd90 href=https://www.nps.gov/sagu/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><line x1="12" y1="21" x2="12" y2="5"/><path d="M12 14H8V9"/><path d="M12 10h4v6"/><line x1="4" y1="21" x2="20" y2="21"/></svg></span>
 <span class=park-name>Saguaro</span>
 <span class=park-state>AZ</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/seki/index.htm target=_blank rel=noopener title="Sequoia, CA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M6 18l3-8 3 8z"/><path d="M6 14 9 7l3 7z"/><line x1="9" y1="18" x2="9" y2="21"/><path d="M14 19l3-7 3 7z"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Saguaro</span>
+<span class=tt-park-meta>AZ &#183; Visited Feb 24, 2024</span>
+<span class=tt-empty>No trails logged yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#dfcb90 href=https://www.nps.gov/seki/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M6 18l3-8 3 8z"/><path d="M6 14 9 7l3 7z"/><line x1="9" y1="18" x2="9" y2="21"/><path d="M14 19l3-7 3 7z"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
 <span class=park-name>Sequoia</span>
 <span class=park-state>CA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90da href=https://www.nps.gov/shen/index.htm target=_blank rel=noopener title="Shenandoah, VA"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M6 18l3-8 3 8z"/><path d="M6 14 9 7l3 7z"/><line x1="9" y1="18" x2="9" y2="21"/><path d="M14 19l3-7 3 7z"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Sequoia</span>
+<span class=tt-park-meta>CA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90da href=https://www.nps.gov/shen/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M6 18l3-8 3 8z"/><path d="M6 14 9 7l3 7z"/><line x1="9" y1="18" x2="9" y2="21"/><path d="M14 19l3-7 3 7z"/><line x1="17" y1="19" x2="17" y2="21"/></svg></span>
 <span class=park-name>Shenandoah</span>
 <span class=park-state>VA</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90d0df href=https://www.nps.gov/thro/index.htm target=_blank rel=noopener title="Theodore Roosevelt, ND"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 5,11 8,16 11,9 14,15 17,8 20,14 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Shenandoah</span>
+<span class=tt-park-meta>VA</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90d0df href=https://www.nps.gov/thro/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 5,11 8,16 11,9 14,15 17,8 20,14 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
 <span class=park-name>Theodore Roosevelt</span>
 <span class=park-state>ND</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90cb href=https://www.nps.gov/viis/index.htm target=_blank rel=noopener title="Virgin Islands, VI"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q3-3 6 0t6 0 6 0 2-1"/><path d="M6 20q0-4 2-4t2 4"/><path d="M14 20q0-3 1.5-3t1.5 3"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Theodore Roosevelt</span>
+<span class=tt-park-meta>ND</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df90cb href=https://www.nps.gov/viis/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q3-3 6 0t6 0 6 0 2-1"/><path d="M6 20q0-4 2-4t2 4"/><path d="M14 20q0-3 1.5-3t1.5 3"/></svg></span>
 <span class=park-name>Virgin Islands</span>
 <span class=park-state>VI</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90dfb3 href=https://www.nps.gov/voya/index.htm target=_blank rel=noopener title="Voyageurs, MN"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="4,13 9,6 12,10 15,5 20,13"/><path d="M2 17q3-1.5 5 0t5 0 5 0 5 0"/><path d="M2 20q3-1.5 5 0t5 0 5 0 5 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Virgin Islands</span>
+<span class=tt-park-meta>VI</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90dfb3 href=https://www.nps.gov/voya/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="4,13 9,6 12,10 15,5 20,13"/><path d="M2 17q3-1.5 5 0t5 0 5 0 5 0"/><path d="M2 20q3-1.5 5 0t5 0 5 0 5 0"/></svg></span>
 <span class=park-name>Voyageurs</span>
 <span class=park-state>MN</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90c1df href=https://www.nps.gov/whsa/index.htm target=_blank rel=noopener title="White Sands, NM"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q4-4 8 0t8 0 4-2"/><path d="M2 15q4-4 8 0t8 0 4-2"/><path d="M2 20q4-4 8 0t8 0 4-2"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Voyageurs</span>
+<span class=tt-park-meta>MN</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#90c1df href=https://www.nps.gov/whsa/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 10q4-4 8 0t8 0 4-2"/><path d="M2 15q4-4 8 0t8 0 4-2"/><path d="M2 20q4-4 8 0t8 0 4-2"/></svg></span>
 <span class=park-name>White Sands</span>
 <span class=park-state>NM</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#a990df href=https://www.nps.gov/wica/index.htm target=_blank rel=noopener title="Wind Cave, SD"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 20 8 6l6 10 4-6 4 10"/><path d="M9 20a3 3 0 016 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>White Sands</span>
+<span class=tt-park-meta>NM</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#a990df href=https://www.nps.gov/wica/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M2 20 8 6l6 10 4-6 4 10"/><path d="M9 20a3 3 0 016 0"/></svg></span>
 <span class=park-name>Wind Cave</span>
 <span class=park-state>SD</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/wrst/index.htm target=_blank rel=noopener title="Wrangell–St. Elias, AK"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Wind Cave</span>
+<span class=tt-park-meta>SD</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df9090 href=https://www.nps.gov/wrst/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,19 8,8 11,13 14,7 22,19"/><line x1="2" y1="19" x2="22" y2="19"/></svg></span>
 <span class=park-name>Wrangell–St. Elias</span>
 <span class=park-state>AK</span>
-</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df909f href=https://www.nps.gov/yell/index.htm target=_blank rel=noopener title="Yellowstone, WY/MT/ID"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 20q4-2 8 0t8 0"/><line x1="12" y1="16" x2="12" y2="4"/><line x1="12" y1="9" x2="9" y2="6"/><line x1="12" y1="9" x2="15" y2="6"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Wrangell–St. Elias</span>
+<span class=tt-park-meta>AK</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--unvisited" style=--park-color:#df909f href=https://www.nps.gov/yell/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><path d="M4 20q4-2 8 0t8 0"/><line x1="12" y1="16" x2="12" y2="4"/><line x1="12" y1="9" x2="9" y2="6"/><line x1="12" y1="9" x2="15" y2="6"/></svg></span>
 <span class=park-name>Yellowstone</span>
 <span class=park-state>WY/MT/ID</span>
-</span></a><a class="park-badge park-badge--visited" style=--park-color:#dfcb90 href=https://www.nps.gov/yose/index.htm target=_blank rel=noopener title="Yosemite, CA — visited Jul 29, 2026"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><line x1="4" y1="6" x2="14" y2="6"/><line x1="9" y1="6" x2="9" y2="16"/><line x1="12" y1="6" x2="12" y2="16"/><path d="M3 18q4-2 8 0t8 0"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Yellowstone</span>
+<span class=tt-park-meta>WY/MT/ID</span>
+<span class=tt-empty>Not visited yet</span>
+</span></a><a class="park-badge park-badge--visited" style=--park-color:#dfcb90 href=https://www.nps.gov/yose/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><line x1="4" y1="6" x2="14" y2="6"/><line x1="9" y1="6" x2="9" y2="16"/><line x1="12" y1="6" x2="12" y2="16"/><path d="M3 18q4-2 8 0t8 0"/></svg></span>
 <span class=park-name>Yosemite</span>
 <span class=park-state>CA</span>
-</span></a><a class="park-badge park-badge--visited" style=--park-color:#d590df href=https://www.nps.gov/zion/index.htm target=_blank rel=noopener title="Zion, UT — visited Apr 12, 2025"><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
+</span><span class=park-tooltip><span class=tt-park-name>Yosemite</span>
+<span class=tt-park-meta>CA &#183; Visited Jul 29, 2026</span>
+<span class=tt-hike>Sentinel Dome Trail<span class=tt-hike-date>Jul 29, 2026</span></span>
+</span></a><a class="park-badge park-badge--visited" style=--park-color:#d590df href=https://www.nps.gov/zion/index.htm target=_blank rel=noopener><span class=park-content><span class=park-icon><svg viewBox="0 0 24 24" class="park-icon-svg"><polyline points="2,8 6,10 10,7 14,10 18,7 22,9"/><polyline points="2,12 6,14 10,11 14,14 18,11 22,13"/><polyline points="2,16 6,18 10,15 14,18 18,15 22,17"/></svg></span>
 <span class=park-name>Zion</span>
-<span class=park-state>UT</span></span></a></div></div><aside class=parks-timeline-col><h2>Visit Log</h2><div class=tl-full><div class=tl-today-row>Today &mdash; Sep 2026</div><div class=tl-year>2026</div><div class=tl-row><span class=tl-date>Aug 27, 2026</span>
+<span class=park-state>UT</span>
+</span><span class=park-tooltip><span class=tt-park-name>Zion</span>
+<span class=tt-park-meta>UT &#183; Visited Apr 12, 2025</span>
+<span class=tt-hike>Canyon Overlook Trail<span class=tt-hike-date>Apr 12, 2025</span></span>
+<span class=tt-hike>Riverside Walk (Zion Narrows)<span class=tt-hike-date>Apr 14, 2025</span></span>
+<span class=tt-hike>Pa'rus Trail<span class=tt-hike-date>Apr 14, 2025</span></span></span></a></div></div><aside class=parks-timeline-col><h2>Visit Log</h2><div class=tl-full><div class=tl-today-row>Today &mdash; Sep 2026</div><div class=tl-year>2026</div><div class=tl-row><span class=tl-date>Aug 27, 2026</span>
 <span class=tl-name>Great Smoky Mountains</span>
 <span class=tl-loc>TN/NC</span></div><div class=tl-row><span class=tl-date>Jul 29, 2026</span>
 <span class=tl-name>Yosemite</span>
