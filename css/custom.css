@@ -1025,3 +1025,40 @@ footer {
   .races-feature-stats { gap: 0.75rem 1.25rem; }
   .races-feature-num   { font-size: 1.1rem; }
 }
+
+/* ── Photo grid (blog posts with several photos of one place). Uses
+     object-fit: contain (not cover) so no part of any photo is ever
+     cropped away — mismatched aspect ratios just letterbox instead. ──── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.4rem;
+  margin: 1rem 0;
+}
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  background: color-mix(in srgb, var(--text-color) 6%, var(--background-color));
+  border-radius: 8px;
+  display: block;
+}
+@media (max-width: 600px) {
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Hero photo (single standout image in a post). No forced aspect-ratio
+     box — that caused letterbox bars on photos whose shape didn't match
+     (blank space). height:auto keeps each photo's own natural shape, so
+     there's never any cropping or blank space; width is scaled down to
+     keep portrait photos from taking up too much vertical room. ──── */
+.hero-photo {
+  display: block;
+  width: 38%;
+  height: auto;
+  margin: 1.25rem auto;
+  border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .hero-photo { width: 65%; }
+}
