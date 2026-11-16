@@ -142,6 +142,19 @@ const peaks = [
     companion:  "Friends",
     alltrails:  "https://www.alltrails.com/trail/us/north-carolina/clingmans-dome-observation-tower-trail",
   },
+  {
+    name:       "Stony Man via Appalachian Trail",
+    type:       "summit",
+    location:   "Shenandoah National Park, VA",
+    lat:        38.593,
+    lng:        -78.376,
+    elevation:  "4,011 ft",
+    gain:       "302 ft",
+    difficulty: "Moderate",
+    date:       "Nov 12, 2026",
+    companion:  "Family",
+    alltrails:  "https://www.alltrails.com/trail/us/virginia/stony-man-via-appalachian-trail",
+  },
 ];
 
 const COLORS = {
