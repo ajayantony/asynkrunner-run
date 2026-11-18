@@ -39,7 +39,7 @@ One bucket list item I’m actively pursuing: run a half marathon in all 50 US s
 <span class=topic-card-count>2 posts</span>
 </a><a href=https://asynkrunner.com/tags/health/ class=topic-card><span class=topic-card-icon>🥗</span>
 <span class=topic-card-label>Health</span>
-<span class=topic-card-count>1 post</span></a></div><h2 class="posts-heading trending-heading">🔥 Trending</h2><ul class=post-cards id=trending-cards><li class=trending-loading>Loading…</li></ul><script type=application/json id=all-posts-data>[{"slug":"posts--virginia-is-for-marathon-lovers","title":"Virginia Is for (Marathon) Lovers","url":"https:\/\/asynkrunner.com\/posts\/virginia-is-for-marathon-lovers\/","thumbnail":"/images/virginia-is-for-marathon-lovers/376f2dd6-be3e-425e-99a1-b86bfd0dc9bc-1050x1400.webp"},{"slug":"posts--building-nritya-samarpanam-a-bharatanatyam-arangetram-website","title":"Building Nritya Samarpanam - A Bharatanatyam Arangetram Website","url":"https:\/\/asynkrunner.com\/posts\/building-nritya-samarpanam-a-bharatanatyam-arangetram-website\/","thumbnail":""},{"slug":"posts--lent-and-a-healthier-me","title":"Lent and a Healthier Me","url":"https:\/\/asynkrunner.com\/posts\/lent-and-a-healthier-me\/","thumbnail":""},{"slug":"posts--find-your-starting-line-the-race","title":"Find Your Starting Line: The Race","url":"https:\/\/asynkrunner.com\/posts\/find-your-starting-line-the-race\/","thumbnail":"/images/find-your-starting-line-the-race/Screenshot-2025-03-28-at-10.48.25-PM-1-1024x415.webp"},{"slug":"posts--racing-the-sunshine-state","title":"Racing the Sunshine State","url":"https:\/\/asynkrunner.com\/posts\/racing-the-sunshine-state\/","thumbnail":"/images/racing-the-sunshine-state/7d136499-02d9-4a57-9ff4-7c965b6df3a4-768x1024.webp"},{"slug":"posts--my-running-journey-from-zero-to-half-marathon","title":"My Running Journey: From Zero to Half Marathon","url":"https:\/\/asynkrunner.com\/posts\/my-running-journey-from-zero-to-half-marathon\/","thumbnail":""},{"slug":"posts--my-unexpected-journey-into-long-distance-running","title":"My Unexpected Journey into Long-Distance Running","url":"https:\/\/asynkrunner.com\/posts\/my-unexpected-journey-into-long-distance-running\/","thumbnail":"/images/my-unexpected-journey-into-long-distance-running/f011fd1a-8b43-4c25-bbb5-5f6f965c97a8.webp"}]</script><script type=module>
+<span class=topic-card-count>1 post</span></a></div><h2 class="posts-heading trending-heading">🔥 Trending</h2><ul class=post-cards id=trending-cards><li class=trending-loading>Loading…</li></ul><script type=application/json id=all-posts-data>[{"slug":"posts--virginia-is-for-marathon-lovers","title":"Virginia Is for (Marathon) Lovers","url":"https:\/\/asynkrunner.com\/posts\/virginia-is-for-marathon-lovers\/","thumbnail":"/images/virginia-is-for-marathon-lovers/376f2dd6-be3e-425e-99a1-b86bfd0dc9bc-1050x1400.webp","date":"2026-11-14"},{"slug":"posts--building-nritya-samarpanam-a-bharatanatyam-arangetram-website","title":"Building Nritya Samarpanam - A Bharatanatyam Arangetram Website","url":"https:\/\/asynkrunner.com\/posts\/building-nritya-samarpanam-a-bharatanatyam-arangetram-website\/","thumbnail":"","date":"2026-04-05"},{"slug":"posts--lent-and-a-healthier-me","title":"Lent and a Healthier Me","url":"https:\/\/asynkrunner.com\/posts\/lent-and-a-healthier-me\/","thumbnail":"","date":"2025-04-10"},{"slug":"posts--find-your-starting-line-the-race","title":"Find Your Starting Line: The Race","url":"https:\/\/asynkrunner.com\/posts\/find-your-starting-line-the-race\/","thumbnail":"/images/find-your-starting-line-the-race/Screenshot-2025-03-28-at-10.48.25-PM-1-1024x415.webp","date":"2025-03-30"},{"slug":"posts--racing-the-sunshine-state","title":"Racing the Sunshine State","url":"https:\/\/asynkrunner.com\/posts\/racing-the-sunshine-state\/","thumbnail":"/images/racing-the-sunshine-state/7d136499-02d9-4a57-9ff4-7c965b6df3a4-768x1024.webp","date":"2025-03-29"},{"slug":"posts--my-running-journey-from-zero-to-half-marathon","title":"My Running Journey: From Zero to Half Marathon","url":"https:\/\/asynkrunner.com\/posts\/my-running-journey-from-zero-to-half-marathon\/","thumbnail":"","date":"2025-03-28"},{"slug":"posts--my-unexpected-journey-into-long-distance-running","title":"My Unexpected Journey into Long-Distance Running","url":"https:\/\/asynkrunner.com\/posts\/my-unexpected-journey-into-long-distance-running\/","thumbnail":"/images/my-unexpected-journey-into-long-distance-running/f011fd1a-8b43-4c25-bbb5-5f6f965c97a8.webp","date":"2025-03-27"}]</script><script type=module>
     import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
     import { getFirestore, doc, getDoc, collection, getCountFromServer }
       from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
@@ -56,7 +56,25 @@ One bucket list item I’m actively pursuing: run a half marathon in all 50 US s
     const db    = getFirestore(app);
     const posts = JSON.parse(document.getElementById('all-posts-data').textContent);
 
-    async function fetchScore(slug) {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    const RECENCY_GRAVITY = 0.5;
+
+    function ageInDays(dateStr) {
+      const ms = Date.now() - new Date(dateStr).getTime();
+      return Math.max(0, ms / 86400000);
+    }
+
+    async function fetchScore(slug, dateStr) {
       const [viewSnap, reactionSnap, commentCount] = await Promise.all([
         getDoc(doc(db, 'views', slug)).catch(() => null),
         getDoc(doc(db, 'reactions', slug)).catch(() => null),
@@ -67,16 +85,18 @@ One bucket list item I’m actively pursuing: run a half marathon in all 50 US s
       const claps     = reactionSnap?.exists() ? (reactionSnap.data().claps || 0) : 0;
       const likes     = reactionSnap?.exists() ? (reactionSnap.data().likes || 0) : 0;
       const reactions = claps + likes;
-      return { views, reactions, commentCount, score: views + (claps * 2) + (likes * 2) + (commentCount * 3) };
+      const raw   = views + (claps * 2) + (likes * 2) + (commentCount * 3);
+      const score = raw / Math.pow(ageInDays(dateStr) + 2, RECENCY_GRAVITY);
+      return { views, reactions, commentCount, score };
     }
 
     async function renderTrending() {
       const container = document.getElementById('trending-cards');
       try {
         const scored = await Promise.all(
-          posts.map(async p => ({ ...p, ...(await fetchScore(p.slug)) }))
+          posts.map(async p => ({ ...p, ...(await fetchScore(p.slug, p.date)) }))
         );
-        const top = scored.sort((a, b) => b.score - a.score).slice(0, 2);
+        const top = scored.sort((a, b) => b.score - a.score).slice(0, 3);
 
         container.replaceChildren();
         if (top.every(p => (p.score || 0) === 0)) {
