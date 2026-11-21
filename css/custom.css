@@ -1062,3 +1062,243 @@ footer {
 @media (max-width: 600px) {
   .hero-photo { width: 65%; }
 }
+
+/* ── Recipes ─────────────────────────────────────────────────────────── */
+/* .peaks-stats / .peak-stat* mirror layouts/_default/peaks.html's own
+   (page-scoped) stat-card styling — redefined here since the recipe
+   stat row needs the identical look across three different templates. */
+.peaks-stats {
+  display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0 1.5rem;
+}
+.peak-stat {
+  flex: 1 1 100px;
+  display: flex; flex-direction: column; align-items: center;
+  background: color-mix(in srgb, var(--link-color) 8%, var(--background-color));
+  border: 1px solid var(--border-color);
+  border-radius: 10px; padding: 1rem 0.75rem 0.85rem; text-align: center;
+}
+.peak-stat-num {
+  font-family: var(--font-second); font-size: 1.5rem;
+  font-weight: 700; color: var(--link-color); line-height: 1;
+}
+.peak-stat-label {
+  font-family: var(--font-second); font-size: 0.72rem;
+  color: var(--meta-color); margin-top: 0.35rem;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+/* Shared across layouts/recipes/list.html, layouts/recipetags/term.html,
+   and layouts/recipes/single.html — kept global (unlike the usual
+   per-page <style> convention) because three separate templates need the
+   identical rules, so one source avoids drift between them. */
+
+.recipe-type-toggle {
+  display: flex;
+  gap:     0.5rem;
+  margin:  0 0 1.25rem;
+}
+
+.type-toggle-btn {
+  font-family:    var(--font-second);
+  font-size:      0.82rem;
+  font-weight:    600;
+  color:          var(--text-color);
+  background:     transparent;
+  border:         1px solid var(--border-color);
+  border-radius:  99px;
+  padding:        0.4em 1em;
+  cursor:         pointer;
+  transition:     background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.type-toggle-btn:hover {
+  border-color: var(--link-color);
+}
+
+.type-toggle-btn--active {
+  color:        #fff;
+  background:   var(--link-color);
+  border-color: var(--link-color);
+}
+
+/* Difficulty badges — same values as layouts/_default/peaks.html's own
+   <style> block, duplicated intentionally (peaks.html is a single
+   standalone page; recipes needs the same badge across three templates). */
+.diff-badge {
+  font-size:      0.65rem;
+  font-weight:    600;
+  border-radius:  4px;
+  padding:        0.15em 0.45em;
+  white-space:    nowrap;
+}
+.diff-badge--easy     { background: rgba(61,186,126,0.15); color: #3dba7e; }
+.diff-badge--moderate { background: rgba(240,200,74,0.2);  color: #c8960a; }
+.diff-badge--hard     { background: rgba(240,136,74,0.15); color: #f0884a; }
+
+.recipe-cuisine,
+.recipe-cuisine-badge {
+  font-family: var(--font-second);
+  font-size:   0.72rem;
+  color:       var(--meta-color);
+}
+
+.recipe-card-time {
+  font-family: var(--font-second);
+  font-size:   0.72rem;
+  color:       var(--meta-color);
+}
+
+.recipe-type-badge {
+  display:        inline-block;
+  font-family:    var(--font-second);
+  font-size:      0.75rem;
+  font-weight:    600;
+  border-radius:  6px;
+  padding:        0.25em 0.7em;
+}
+.recipe-type-badge--food     { background: rgba(77,168,218,0.15);  color: #4da8da; }
+.recipe-type-badge--cocktail { background: rgba(147,112,219,0.15); color: #9370db; }
+
+.recipe-badges {
+  display:       flex;
+  flex-wrap:     wrap;
+  gap:           0.5rem;
+  align-items:   center;
+  margin:        0.5rem 0 1rem;
+}
+
+.recipe-source {
+  display:       flex;
+  align-items:   center;
+  gap:           0.55rem;
+  font-size:     0.85rem;
+  padding:       0.6rem 0.9rem;
+  border-radius: 8px;
+  border:        1px solid var(--border-color);
+  margin:        0 0 1.25rem;
+}
+
+.recipe-source-icon { font-size: 1rem; line-height: 1; }
+
+.recipe-source-text { color: var(--text-color); }
+
+.recipe-source--adapted {
+  background:   color-mix(in srgb, var(--link-color) 6%, var(--background-color));
+  border-color: color-mix(in srgb, var(--link-color) 30%, var(--border-color));
+}
+
+.recipe-source--original {
+  background:   color-mix(in srgb, #3dba7e 8%, var(--background-color));
+  border-color: color-mix(in srgb, #3dba7e 30%, var(--border-color));
+}
+
+.recipe-source-badge {
+  display:        inline-block;
+  font-size:      0.68rem;
+  font-weight:    600;
+  border-radius:  4px;
+  padding:        0.15em 0.5em;
+  white-space:    nowrap;
+}
+
+.recipe-source-badge--adapted {
+  background: color-mix(in srgb, var(--link-color) 12%, var(--background-color));
+  color:      var(--link-color);
+}
+
+.recipe-source-badge--original {
+  background: rgba(61,186,126,0.15);
+  color:      #3dba7e;
+}
+
+.recipe-hero {
+  display:       block;
+  width:         100%;
+  max-width:     520px;
+  height:        auto;
+  margin:        0 auto 1.5rem;
+  border-radius: 10px;
+}
+
+.recipe-intro {
+  margin-bottom: 1.5rem;
+}
+
+.recipe-body {
+  display: flex;
+  gap:     2.5rem;
+  margin:  1.5rem 0;
+}
+
+.recipe-ingredients {
+  width:         260px;
+  flex-shrink:   0;
+  background:    color-mix(in srgb, var(--link-color) 6%, var(--background-color));
+  border:        1px solid var(--border-color);
+  border-radius: 10px;
+  padding:       1.25rem 1.5rem;
+}
+
+.recipe-ingredients h2,
+.recipe-instructions h2 {
+  font-size:     1rem;
+  margin-top:    0;
+  margin-bottom: 0.85rem;
+}
+
+.ingredient-list {
+  list-style: none;
+  padding:    0;
+  margin:     0;
+  display:    flex;
+  flex-direction: column;
+  gap:        0.5rem;
+  font-size:  0.9rem;
+}
+
+.ingredient-list li {
+  padding-left:  1.4rem;
+  position:      relative;
+}
+
+.ingredient-list li::before {
+  content:      '';
+  position:     absolute;
+  left:         0;
+  top:          0.3em;
+  width:        0.85em;
+  height:       0.85em;
+  border:       1.5px solid var(--link-color);
+  border-radius: 3px;
+}
+
+.recipe-instructions {
+  flex:      1;
+  min-width: 0;
+}
+
+.instruction-list {
+  padding-left: 1.4rem;
+  margin:       0;
+  display:      flex;
+  flex-direction: column;
+  gap:          0.9rem;
+  font-size:    0.95rem;
+  line-height:  1.6;
+}
+
+.instruction-list li {
+  padding-left: 0.3rem;
+}
+
+.recipe-tags {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .recipe-body {
+    flex-direction: column;
+  }
+  .recipe-ingredients {
+    width: 100%;
+  }
+}
