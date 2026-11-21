@@ -3,9 +3,35 @@
    Inspiration: Scribbles (scribbles.page) — warm serif, generous spacing
    ───────────────────────────────────────────────────────────────────────── */
 
-/* Fonts loaded via custom_head.html:
+/* Fonts self-hosted from static/fonts/ (no live Google Fonts CDN request —
+   loading fonts.googleapis.com on every visit sends their IP to Google
+   with no consent, which is what got a German court involved in 2022):
    - Lora      → body text  (warm, readable serif)
    - Inter     → nav, meta, tags, headings (clean sans-serif)            */
+
+@font-face {
+  font-family: "Inter";
+  font-style:  normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/inter-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style:  normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url("/fonts/lora-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style:  italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/lora-italic-variable.woff2") format("woff2");
+}
 
 /* ── Root overrides ───────────────────────────────────────────────────── */
 :root {
@@ -864,6 +890,17 @@ footer {
 #post-engagement .comment-status {
   font-size: 0.8rem;
   opacity:   0.55;
+}
+
+#post-engagement .comment-disclosure {
+  font-size: 0.72rem;
+  color:     var(--meta-color);
+  margin:    0.6rem 0 0;
+}
+
+#post-engagement .comment-disclosure a {
+  color: var(--meta-color);
+  text-decoration: underline;
 }
 
 /* Comment list */
