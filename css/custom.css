@@ -1210,6 +1210,13 @@ footer {
   color:      #3dba7e;
 }
 
+/* Recipe photos are typically square, subject centered in frame — the
+   blog card thumb's "top center" crop (tuned for landscape cover photos)
+   cuts off the actual dish. Center the crop for recipe cards instead. */
+.recipe-card .post-card-thumb {
+  object-position: center;
+}
+
 .recipe-hero {
   display:       block;
   width:         100%;
