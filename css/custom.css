@@ -1267,6 +1267,25 @@ footer {
   margin-bottom: 1.5rem;
 }
 
+/* Extra recipe photos (e.g. before/after), placed in the intro markdown.
+   Natural height, no forced aspect-ratio, so landscape shots don't letterbox
+   the way they would in the portrait-oriented .photo-grid. */
+.recipe-photos {
+  display:               grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:                   0.5rem;
+  margin:                1rem 0;
+}
+.recipe-photos img {
+  width:         100%;
+  height:        auto;
+  border-radius: 8px;
+  display:       block;
+}
+@media (max-width: 600px) {
+  .recipe-photos { grid-template-columns: 1fr; }
+}
+
 .recipe-body {
   display: flex;
   gap:     2.5rem;
