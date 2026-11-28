@@ -1,3 +1,2 @@
-User-agent: *
-Disallow: /
-ps://asynkrunner.com/sitemap.xml
+User-Agent: *
+Sitemap: https://asynkrunner.com/sitemap.xml
